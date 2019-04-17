@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Projects by Evan Finnigan"/>
+
+		<title>Projects</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+		<!-- Nav bar based on w3schools tutorials -->
+		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+		<!-- https://www.w3schools.com/css/css_navbar.asp -->
+		<script>
+		function navDropDown() {
+			var x = document.getElementById("topnav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+		</script>
+
+	</head>
+	<body>
+		<header class="sticky">
+
+			<!-- Nav bar based on w3schools tutorials -->
+			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+			<!-- https://www.w3schools.com/css/css_navbar.asp -->
+			<nav class="nav" id="topnav">
+				<a href="../index.html"><span class="left logo">Evan Finnigan</span></a>
+				<div class="right">
+					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
+					<div class="navbar">
+						<a href="../projects/index.html">Projects</a>
+						<a href="../tutorials/index.html">Tutorials</a>
+						<a href="../blog/index.html">Blog</a>
+						<a href="../about/index.html">About</a>
+						<a href="../contact/index.html">Contact</a>
+					</div>
+				</div>
+			</nav>
+
+		</header>
+		
+		
+		<main class="content">
+			<h1>Projects</h1>
+			
+			<p>These are some projects and games I have created. The links below provide more details about each project!</p>
+			
+			<br><br>
+
+			<div class="short-preview">
+				<a href="bin-packing.html"><img src="../images/binpacking-thumbnail.jpg" alt="Thumbnail for Game Engines project."></a>
+				<a href="bin-packing.html">Bin Packing</a>
+			</div>
+			
+			<div class="short-preview">
+				<a href="monster-lazer.html"><img src="../images/monster-lazer-thumbnail.png" alt="Thumbnail for Game Engines project."></a>
+				<a href="monster-lazer.html">Monster Lazer</a>
+			</div>
+			
+			<div class="short-preview">
+				<a href="game-engines.html"><img src="../images/thumbnails/aerial-firefighting.png" alt="Thumbnail for Game Engines project."></a>
+				<a href="game-engines.html">Game Engines Final Project</a>
+			</div>
+			
+			<br class="clear">
+			<br><br><br>
+			
+			<p>Check back for more projects in the future.</p>
+			
+		</main>
+		
+		
+		<footer>
+			<address>
+			<br>
+			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
+			</address>
+		</footer>
+</html>

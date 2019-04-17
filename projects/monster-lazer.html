@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Monster Lazer game by Evan Finnigan"/>
+
+		<title>Monster Lazer</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+		<!-- Nav bar based on w3schools tutorials -->
+		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+		<!-- https://www.w3schools.com/css/css_navbar.asp -->
+		<script>
+		function navDropDown() {
+			var x = document.getElementById("topnav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+		</script>
+
+	</head>
+	<body>
+		<header class="sticky">
+
+			<!-- Nav bar based on w3schools tutorials -->
+			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+			<!-- https://www.w3schools.com/css/css_navbar.asp -->
+			<nav class="nav" id="topnav">
+				<a href="../index.html"><span class="left logo">Evan Finnigan</span></a>
+				<div class="right">
+					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
+					<div class="navbar">
+						<a href="../projects/index.html">Projects</a>
+						<a href="../tutorials/index.html">Tutorials</a>
+						<a href="../blog/index.html">Blog</a>
+						<a href="../about/index.html">About</a>
+						<a href="../contact/index.html">Contact</a>
+					</div>
+				</div>
+			</nav>
+
+		</header>
+		
+		
+		<main class="content">
+			<h1>Monster Lazer</h1>
+			
+			<a href="https://evanfinnigan.github.io/monster_lazer/">Web Demo</a>
+			<br><br>
+			<a href="https://github.com/evanfinnigan/monster_lazer">View the Project on GitHub</a>
+			<br><br><br>
+			
+			<figure>
+				<img src="../images/monster-lazer.png"  alt="Screenshot of Monster Lazer game">
+				<figcaption>Screenshot from the Monster Lazer game</figcaption>
+			</figure>
+
+			<br>
+
+			<p> This project was created in one weekend for QHacks, a hackathon at Queen’s University in Kingston Ontario. This game is written in JavaScript which runs in an HTML5 canvas. I didn’t know any JavaScript before this project, so it was a good learning experience. </p>
+
+			<br><br>
+			<a href="https://evanfinnigan.github.io/monster_lazer/">Web Demo</a>
+			<br><br>
+			<a href="https://github.com/evanfinnigan/monster_lazer">View the Project on GitHub</a>
+			
+		</main>
+		
+		
+		<footer>
+			<address>
+			<br>
+			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
+			</address>
+		</footer>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Bin Packing algorithm visualization by Evan Finnigan"/>
+
+		<title>Bin Packing</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+		<!-- Nav bar based on w3schools tutorials -->
+		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+		<!-- https://www.w3schools.com/css/css_navbar.asp -->
+		<script>
+		function navDropDown() {
+			var x = document.getElementById("topnav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+		</script>
+
+	</head>
+	<body>
+		<header class="sticky">
+
+			<!-- Nav bar based on w3schools tutorials -->
+			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+			<!-- https://www.w3schools.com/css/css_navbar.asp -->
+			<nav class="nav" id="topnav">
+				<a href="../index.html"><span class="left logo">Evan Finnigan</span></a>
+				<div class="right">
+					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
+					<div class="navbar">
+						<a href="../projects/index.html">Projects</a>
+						<a href="../tutorials/index.html">Tutorials</a>
+						<a href="../blog/index.html">Blog</a>
+						<a href="../about/index.html">About</a>
+						<a href="../contact/index.html">Contact</a>
+					</div>
+				</div>
+			</nav>
+
+		</header>
+		
+		
+		<main class="content">
+			<h1>Bin Packing Algorithm Visualization</h1>
+			
+			<a href="https://evanfinnigan.github.io/binpacking/">Web Demo</a>
+			<br><br>
+			<a href="https://github.com/evanfinnigan/binpacking">View the Project on GitHub</a>
+			<br><br><br>
+			
+			<figure>
+				<img src="../images/binpacking-tutorial-fig4.jpg"  alt="Screenshot of Bin Packing program">
+				<figcaption>Screenshot from the Bin Packing project</figcaption>
+			</figure>
+
+			<br>
+
+			<p>This project was created for CS 4445: Analysis of Algorithms II, taught by Roberto Solis-Oba at The University of Western Ontario. </p>
+
+			<p>The goal of the project was to create a visualization of an algorithm discussed in class, in order to help the viewer understand how the algorithm works. I chose to create a program which would visualize several different Bin Packing algorithms.</p>
+
+			<p>The program has options to experiment with the input set, as well as to decide whether or not to sort the input before packing into bins, to see how  that affects the algorithm performance and the final result.</p>
+
+			<br>
+			<a href="../tutorials/bin-packing.html">Bin Packing Tutorial</a>
+			<br><br>
+			<a href="https://evanfinnigan.github.io/binpacking/">Web Demo</a>
+			<br><br>
+			<a href="https://github.com/evanfinnigan/binpacking">View the Project on GitHub</a>
+			
+		</main>
+		
+		
+		<footer>
+			<address>
+			<br>
+			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
+			</address>
+		</footer>
+</html>

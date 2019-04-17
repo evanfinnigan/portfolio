@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Contact Evan Finnigan"/>
+
+		<title>Contact</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+		<!-- Nav bar based on w3schools tutorials -->
+		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+		<!-- https://www.w3schools.com/css/css_navbar.asp -->
+		<script>
+		function navDropDown() {
+			var x = document.getElementById("topnav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+		</script>
+
+	</head>
+	<body>
+		<header class="sticky">
+
+			<!-- Nav bar based on w3schools tutorials -->
+			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+			<!-- https://www.w3schools.com/css/css_navbar.asp -->
+			<nav class="nav" id="topnav">
+				<a href="../index.html"><span class="left logo">Evan Finnigan</span></a>
+				<div class="right">
+					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
+					<div class="navbar">
+						<a href="../projects/index.html">Projects</a>
+						<a href="../tutorials/index.html">Tutorials</a>
+						<a href="../blog/index.html">Blog</a>
+						<a href="../about/index.html">About</a>
+						<a href="../contact/index.html">Contact</a>
+					</div>
+				</div>
+			</nav>
+
+		</header>
+		
+		
+		<main class="content">
+			<h1>Contact</h1>
+			
+			<br>
+			
+			<h2>Evan Finnigan</h2>
+			<h3>London, Ontario</h3>
+			
+			<br><br>
+			<a href="mailto:evanfinnigan@gmail.com">evanfinnigan@gmail.com</a>
+			<br><br>
+			<a href="https://github.com/evanfinnigan">Github</a>
+			<br><br>
+			<a href="https://twitter.com/EvanFinnigan">@EvanFinnigan</a>
+			<br><br>
+
+			
+		</main>
+		
+		
+		<footer>
+			<address>
+			<br>
+			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
+			</address>
+		</footer>
+</html>
