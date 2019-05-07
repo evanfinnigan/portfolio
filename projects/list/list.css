@@ -1,0 +1,90 @@
+body {
+	background-color: black;
+}
+
+.rank_box {
+	width: 150px;
+	height: 150px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.ranked_items {
+	width: 1000px;
+	height: 150px;
+	margin-top: 10px;
+	position: relative;
+	background-color: #111
+}
+
+.unranked_items {
+	width: 700px;
+	height: 1120px;
+	margin-top: 10px;
+	position: relative;
+	/*background-color: blue;*/
+}
+
+.drag_box {
+	width: 150px;
+	height: 150px;
+	font-size: 110px;
+	float: left;
+}
+
+.s {
+	background-color: red;
+}
+
+.a {
+	background-color: orange;
+}
+
+.b {
+	background-color: yellow;
+}
+
+.c {
+	background-color: green;
+}
+
+.d {
+	background-color: blue;
+}
+
+.e {
+	background-color: purple;
+}
+
+.f {
+	background-color: pink;
+}
+
+.rank_text {
+	font-size: 40px;
+	font-family: sans-serif;
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+
+.left_column {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+
+.middle_column {
+	width: 1000px;
+	float:left;
+	margin-right: 10px;
+}
+
+.right_column {
+	width: 600px;
+	float: left;
+}
