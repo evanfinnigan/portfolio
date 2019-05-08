@@ -23,13 +23,15 @@ function drop(ev) {
 
 function addItem() {
 	var txt = document.getElementById("insert").value;
-	document.getElementById("insert").value = "";
 	
 	// Check img URL
 	if (txt.match(/\.(jpeg|jpg|gif|png)$/) == null)
 	{
+		window.alert("Invalid Image URL!");
 		return;
 	}
+	
+	document.getElementById("insert").value = "";
 
 	//newItem.innerHTML = txt;
 	var img = document.createElement("img");
@@ -41,6 +43,10 @@ function addItem() {
 	img.src = txt;
 	
 	document.getElementById("unrank_box").appendChild(img);
+}
+
+function checkURL(url) {
+	
 }
 
 function clearItems() {
