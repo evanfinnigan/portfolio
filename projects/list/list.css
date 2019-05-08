@@ -32,6 +32,16 @@ body {
 	float: left;
 }
 
+img {
+	max-width: 150px;
+	max-height: 150px;
+	object-fit: contain;
+}
+
+input {
+	width: 400px;
+}
+
 .s {
 	background-color: red;
 }
