@@ -1,6 +1,6 @@
 # portfolio
 Professional Portfolio
 
-[evanfinnigan.com](evanfinnigan.com)
+[https://evanfinnigan.com](evanfinnigan.com)
 
-[evanfinnigan.github.io/portfolio](evanfinnigan.github.io/portfolio)
+[https://evanfinnigan.github.io/portfolio](evanfinnigan.github.io/portfolio)
