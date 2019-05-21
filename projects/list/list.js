@@ -45,10 +45,6 @@ function addItem() {
 	document.getElementById("unrank_box").appendChild(img);
 }
 
-function checkURL(url) {
-	
-}
-
 function clearItems() {
 	var unrank_box = document.getElementById("unrank_box");
 	
