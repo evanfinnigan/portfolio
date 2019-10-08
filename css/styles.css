@@ -38,11 +38,6 @@ a:visited, #visited-example {
 	font-weight: 300;
 }
 
-/*.anchor {
-	padding-top: 50px;
-	margin-top: -10px;
-}*/
-
 .nav {
 	overflow: hidden;
 	background: #171E21;
@@ -237,7 +232,7 @@ img, .four-columns p, .eight-columns p {
 
 .social a {
 	margin: 0px 20px;
-	font-size: 24px;
+	font-size: 1.2em;
 }
 
 .content-img {
