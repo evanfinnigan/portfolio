@@ -150,7 +150,7 @@ code {
 .blogpost {
 	display: block;
 	padding: 10px;
-	margin: 0px 10px;
+	margin: 30px 10px;
 	box-sizing: border-box;
 	background: #171E21;
 	border-style: solid;
@@ -191,6 +191,8 @@ code {
 
 .social {
 	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .left {
@@ -383,6 +385,8 @@ table {
 	
 	.four-columns {
 		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 	
 	.eight-columns {
