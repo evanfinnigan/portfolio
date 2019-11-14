@@ -1,0 +1,41 @@
+:root {
+    --color1: #faa4bd;
+    --color2: #533b4d;
+}
+
+html {
+    height: fit-content;
+    max-height: 100%;
+}
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #FFFFFF;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, var(--color1), var(--color2));
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#clock {
+    margin-top: 20%;
+    margin-bottom: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 7em;
+}
+
+#seconds {
+    margin-top: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 3em;
+}
