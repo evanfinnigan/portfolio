@@ -1,7 +1,7 @@
 body {
 	font-size: 18px;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 300;
 	line-height: normal;
 	padding: 0;
 	margin: 0;
@@ -11,6 +11,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: white;
+	font-family: 'Roboto Slab', sans-serif;
 }
 
 h1 {
@@ -20,22 +21,16 @@ h1 {
 p {
 	box-sizing: border-box;
 	color: white;
-	font-family: 'Roboto Slab', sans-serif;
-	font-weight: 300;
 }
 
 a, #link-example {
 	text-decoration: none;
 	color: #81d4fa;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 300;
 }
 
 a:visited, #visited-example {
 	text-decoration: none;
 	color: #D73C54;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 300;
 }
 
 .nav {
@@ -277,8 +272,6 @@ table {
 	text-align: left;
 	text-decoration: none;
 	color: #81d4fa;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 300;
 	font-size: 1.8em;
 }
 
@@ -310,8 +303,6 @@ table {
 	text-align: center;
 	text-decoration: none;
 	color: #81d4fa;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 300;
 	font-size: 20px;
 }
 
@@ -328,6 +319,10 @@ table {
 
 .text-right {
 	text-align: right;
+}
+
+ol, ul {
+	margin-bottom: 1em;
 }
 
 @media only screen and (min-width:1150px) {
