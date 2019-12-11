@@ -50,9 +50,10 @@ a:visited, #visited-example {
 	font-size: 17px;
 }
 
-.nav a:hover {
+.nav a:hover, a:focus {
 	background-color: #ddd;
 	color: black;
+	border: 1px solid white;
 }
 
 .nav a.active {
@@ -92,6 +93,19 @@ a:visited, #visited-example {
 	clear:both;
 }
 
+.hidden {
+	display: none;
+}
+
+.date-right {
+	float: right;
+	text-align: right;
+}
+
+.date-right::after {
+	clear: both;
+}
+
 @media only screen and (max-width:600px) {
 	.nav a:not(:first-child) {
 		display:none;
@@ -120,6 +134,15 @@ a:visited, #visited-example {
 	
 	.hide-column {
 		display: none;
+	}
+
+	.date-right::before {
+		content: " — "
+	}
+
+	.date-right {
+		text-align: left;
+		float: none;
 	}
 
 }
