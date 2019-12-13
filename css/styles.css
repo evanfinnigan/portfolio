@@ -14,6 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto Slab', sans-serif;
 }
 
+.education {
+	font-weight: 400;
+	margin-left:20px; 
+	margin-top:30px;
+}
+
 h1 {
 	padding: 20px 10px 10px 10px;
 }
