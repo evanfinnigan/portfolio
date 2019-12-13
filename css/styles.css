@@ -209,8 +209,8 @@ code {
 	margin: 32px 10px;
 	box-sizing: border-box;
 	background: #171E21;
-	//border-style: solid;
-	//border-width: 5px 50px;
+	/*border-style: solid;*/
+	/*border-width: 5px 50px;*/
 	border-color: #D73C54;
 	border-radius: 30px;
 	font-size: 16px;
@@ -258,7 +258,7 @@ main {
 }
 
 img {
-	//border-style: solid;
+	/*border-style: solid;*/
 	border-width: 1px;
 	border-color: white;
 	border-radius: 15px;
@@ -328,7 +328,7 @@ table {
 .short-preview {
 	display: inline-block;
 	box-sizing: border-box;
-	//border-style: solid;
+	/*border-style: solid;*/
 	border-width: 1px;
 	border-color: #D73C54;
 	border-radius: 30px;
