@@ -380,6 +380,7 @@ ol, ul {
 		width: 80%;
 		margin: 0 auto;
 		padding: 1em;
+		min-width: 482px;
 	}
 	
 	main p {
@@ -390,6 +391,7 @@ ol, ul {
 		padding: 1em;
 		text-align: left;
 	}
+	
 }
 
 @media only screen and (max-width:500px) {
