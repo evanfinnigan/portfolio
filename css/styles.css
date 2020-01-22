@@ -89,6 +89,12 @@ a img:hover {
 	box-sizing: border-box;
 }
 
+.six-columns {
+	width: 49.99%;
+	float:left;
+	box-sizing: border-box;
+}
+
 .eight-columns {
 	width: 66.66%;
 	float:left;
@@ -96,6 +102,12 @@ a img:hover {
 }
 
 .four-columns::after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.six-columns::after {
 	content:"";
 	display:table;
 	clear:both;
@@ -122,6 +134,12 @@ a img:hover {
 
 .date-right::after {
 	clear: both;
+}
+
+footer div div {
+	text-align: left;
+	padding-left: 50%;
+	line-height: 32px;
 }
 
 @media only screen and (max-width:600px) {
@@ -173,6 +191,7 @@ figcaption {
 }
 
 code {
+	padding: 1em;
 	display: block;
 	box-sizing: border-box;
 	background: #171E21;
@@ -240,6 +259,10 @@ code {
 	float: right;
 }
 
+.center {
+	float: center;
+}
+
 .left::after {
 	content:"";
 	display:table;
@@ -247,6 +270,12 @@ code {
 }
 
 .right::after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.center::after {
 	content:"";
 	display:table;
 	clear:both;
@@ -475,5 +504,6 @@ ol, ul {
 
 footer {
 	padding: 60px 0 60px 0;
+	background: #171E21;
 	text-align: center;
 }

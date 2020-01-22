@@ -40,42 +40,32 @@ let time = 0.0;
 let timestep = 0.001;
 let phase = 0;
 
-let c1 = '#faa4bd';
-let c2 = '#533b4d';
-let c3 = '#470024';
+let colorQueue = ['#621055', '#b52b65', '#ed6663', '#ffa372'];
+
+let enqueue = function(element) {
+    colorQueue.push(element);
+}
+
+let dequeue = function() {
+    return colorQueue.shift();
+}
+
+let rotateColors = function() {
+    enqueue(dequeue());
+}
 
 function drawBackground() {
-    //let color1 = getComputedStyle(document.documentElement).getPropertyValue('--color1');
-    //let color2 = getComputedStyle(document.documentElement).getPropertyValue('--color2');
 
-    let a = colorLerp(c1, c2, time);
-    let b = colorLerp(c2, c3, time);
-    let c = colorLerp(c3, c1, time);
+    let a = colorLerp(colorQueue[0], colorQueue[1], time);
+    let b = colorLerp(colorQueue[1], colorQueue[2], time);
 
-    switch (phase) {
-        case 0:
-            document.documentElement.style.setProperty('--color1', a);
-            document.documentElement.style.setProperty('--color2', b);
-            break;
-        case 1:
-            document.documentElement.style.setProperty('--color1', b);
-            document.documentElement.style.setProperty('--color2', c);
-            break;
-        case 2:
-            document.documentElement.style.setProperty('--color1', c);
-            document.documentElement.style.setProperty('--color2', a);
-            break;
-        default:
-            break;
-    }
+    document.documentElement.style.setProperty('--color1', a);
+    document.documentElement.style.setProperty('--color2', b);
 
     time += timestep;
     if (time >= 1) {
         time = 0;
-        phase++;
-        if (phase == 3) {
-            phase = 0;
-        }
+        rotateColors();
     } 
 }
 

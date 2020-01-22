@@ -1,76 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="description" content="Tutorials by Evan Finnigan"/>
-
-		<title>Tutorials</title>
-
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-		<!-- Nav bar based on w3schools tutorials -->
-		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-		<!-- https://www.w3schools.com/css/css_navbar.asp -->
-		<script>
-		function navDropDown() {
-			var x = document.getElementById("topnav");
-			if (x.className === "nav") {
-				x.className += " responsive";
-			} else {
-				x.className = "nav";
-			}
-		}
-		</script>
-
-	</head>
-	<body>
-		<header>
-
-			<!-- Nav bar based on w3schools tutorials -->
-			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-			<!-- https://www.w3schools.com/css/css_navbar.asp -->
-			<nav>
-				<div class="nav" id="topnav">
-					<a href="../index.html">Evan Finnigan</a>
-					<a href="../projects/index.html">Projects</a>
-					<a class="active" href="#">Tutorials</a>
-					<a href="../blog/index.html">Blog</a>
-					<a href="../contact/index.html">Contact</a>
-					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
-				</div>
-			</nav>
-		</header>
-		
-		
-		<main class="content">
-			<h1>Tutorials</h1>
-			
-			<div class="social">
-				<a class="nofocus" href="https://github.com/evanfinnigan"><img src="../images/icons/github.png" alt="github icon" height="64" width="64"></a>
-				<a class="nofocus" href="https://twitter.com/evanfinnigan"><img src="../images/icons/twitter.png" alt="twitter icon" height="64" width="64"></a>
-				<a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><img src="../images/icons/instagram.png" alt="instagram icon" height="64" width="64"></a>
-			</div>
-			
-			<p>This tutorial goes into detail about the creation process for the Bin Packing project. Check back for more tutorials in the future!</p>
-			
-			<br><br>
-
-			<div class="short-preview">
-				<a class="nofocus" href="bin-packing.html"><img src="../images/binpacking-thumbnail.jpg" alt="Thumbnail for Bin packing tutorial."></a>
-				<a href="bin-packing.html">Bin Packing Tutorial</a>
-			</div>
-			
-		</main>
-		
-		
-		<footer>
-			<address>
-			<br>
-			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
-			</address>
-		</footer>
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://evanfinnigan.com/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <!--  Nav bar based on w3schools tutorials -->
+    <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+    <!--  https://www.w3schools.com/css/css_navbar.asp -->
+    <script>
+      function navDropDown() {
+            var x = document.getElementById("topnav");
+            if (x.className === "nav") {
+              x.className += " responsive";
+            } else {
+              x.className = "nav";
+            }
+          }
+    </script>
+    <meta name="description" content="Tutorials by Evan Finnigan">
+    <title>Tutorials</title>
+  </head>
+  <body>
+    <header>
+      <!--  Nav bar based on w3schools tutorials -->
+      <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+      <!--  https://www.w3schools.com/css/css_navbar.asp -->
+      <nav>
+        <div class="nav" id="topnav"><a class="active" href="../index.html">Evan Finnigan</a><a href="../projects/index.html">Projects</a><a href="../tutorials/index.html">Tutorials</a><a href="../blog/index.html">Blog</a><a href="../contact/index.html">Contact</a><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a></div>
+      </nav>
+    </header>
+    <main class="content">
+      <h1>Tutorials</h1>
+      <div class="social"><a class="nofocus" href="https://github.com/evanfinnigan"><img src="../images/icons/github.png" alt="github icon" height="64" width="64"></a><a class="nofocus" href="https://twitter.com/evanfinnigan"><img src="../images/icons/twitter.png" alt="twitter icon" height="64" width="64"></a><a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><img src="../images/icons/instagram.png" alt="instagram icon" height="64" width="64"></a></div>
+      <p>This tutorial goes into detail about the creation process for the Bin Packing project. Check back for more tutorials in the future!</p><br><br>
+      <div class="short-preview"><a class="nofocus" href="bin-packing.html"><img src="../images/binpacking-thumbnail.jpg" alt="Thumbnail for Bin packing tutorial."></a><a href="bin-packing.html">Bin Packing Tutorial</a></div>
+    </main>
+    <footer>
+      <div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://github.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/github.png" alt="github icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              GitHub
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://twitter.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/twitter.png" alt="twitter icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Twitter
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><span class="left"><img src="https://evanfinnigan.com/images/icons/instagram.png" alt="instagram icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Instagram
+                    </span></a></div><br><br><br>
+        <div class="clear" style="margin-left: -85px;">
+          <address></address>Ⓒ <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

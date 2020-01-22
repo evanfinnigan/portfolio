@@ -1,103 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="description" content="Portfolio Website by Evan Finnigan"/>
-
-		<title>Portfolio Website</title>
-
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-		<!-- Nav bar based on w3schools tutorials -->
-		<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-		<!-- https://www.w3schools.com/css/css_navbar.asp -->
-		<script>
-		function navDropDown() {
-			var x = document.getElementById("topnav");
-			if (x.className === "nav") {
-				x.className += " responsive";
-			} else {
-				x.className = "nav";
-			}
-		}
-		</script>
-
-	</head>
-	<body>
-		<header>
-
-			<!-- Nav bar based on w3schools tutorials -->
-			<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-			<!-- https://www.w3schools.com/css/css_navbar.asp -->
-			<nav>
-				<div class="nav" id="topnav">
-					<a href="../index.html">Evan Finnigan</a>
-					<a class="active" href="../projects/index.html">Projects</a>
-					<a href="../tutorials/index.html">Tutorials</a>
-					<a href="../blog/index.html">Blog</a>
-					<a href="../contact/index.html">Contact</a>
-					<a class="icon" href="javascript:void(0);" onclick="navDropDown()">&#9776;</a>
-				</div>
-			</nav>
-		</header>
-		
-		
-		<main class="content">
-			<h1>Portfolio Website</h1>
-			
-			<a href="https://evanfinnigan.github.io/portfolio/">Github Pages Version</a>
-			<br><br>
-			<a href="https://github.com/evanfinnigan/portfolio">View the Project on GitHub</a>
-			<br><br><br>
-			
-			<figure>
-				<img style="border: solid 3px black" src="../images/website.png"  alt="Screenshot of portfolio website homepage">
-				<figcaption>Screenshot from the homepage</figcaption>
-			</figure>
-
-			<br>
-
-			<p> This project is my professional portfolio, it is the website which you are currently viewing. I created it with html & css, and some of the projects within it also use some javascript. I didn't use frameworks or fancy bells and whistles, keeping the project lightweight and fast to load.</p>
-
-            <p>The website is very fast. At the time of writing, Google's <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.evanfinnigan.com%2F">Pagespeed Insights</a> gave the website scores of 98 and 100 on the mobile and desktop versions of the page respectively.</p>
-
-            <img src="../images/desktop_speed_score.png" alt="Desktop Speed Score of 100">
-            <img src="../images/mobile_speed_score.png" alt="Mobile Speed Score of 98">
-
-            <p>In addition to speed, a main focus of this project is learning about & implementing <a href="https://www.w3.org/TR/WCAG21/">web accessibility standards</a>. This is a work in progess as I continue to learn, but below are some evaluations of accessibility using the <a href="https://wave.webaim.org/report#/https://www.evanfinnigan.com">WebAIM WAVE</a> tool. </p>
-
-            <figure>
-				<img src="../images/webaim_contrast.png"  alt="Contrast ratio of 13.15:1">
-				<figcaption>A contrast ratio of 13.15:1, meeting AAA standards.</figcaption>
-            </figure>
-            
-            <br>
-
-            <figure>
-				<img src="../images/webaim_report.png"  alt="WebAIM report showing 0 errors">
-                <figcaption>WebAIM report showing 0 errors</figcaption>
-            </figure>
-            
-            <p>Accessibility is important because not everybody views web content the same way. Some people may view the web using a screen reader. Others use keyboard navigation to traverse a page. There are many reasons for these adaptations, but what's important is that websites and software should not create barriers for their users.</p>
-
-            <p>While these are some good starting points for accessibility, they don't tell the whole story. These tests have only evaluated the home page, and don't even cover most of the requirements. In order to properly evaluate the accessibility of the web page to ensure compliance, thorough manual testing is still needed. I will continue working to update the website, as there are still many things I need to improve.</p>
-
-			<br><br>
-			<a href="https://evanfinnigan.github.io/portfolio/">Github Pages Version</a>
-			<br><br>
-			<a href="https://github.com/evanfinnigan/portfolio">View the Project on GitHub</a>
-			
-		</main>
-		
-		
-		<footer>
-			<address>
-			<br>
-			 &#9400; <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a><br>
-			</address>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://evanfinnigan.com/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <!--  Nav bar based on w3schools tutorials -->
+    <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+    <!--  https://www.w3schools.com/css/css_navbar.asp -->
+    <script>
+      function navDropDown() {
+            var x = document.getElementById("topnav");
+            if (x.className === "nav") {
+              x.className += " responsive";
+            } else {
+              x.className = "nav";
+            }
+          }
+    </script>
+    <meta name="description" content="Portfolio Website by Evan Finnigan">
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <header>
+      <!--  Nav bar based on w3schools tutorials -->
+      <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+      <!--  https://www.w3schools.com/css/css_navbar.asp -->
+      <nav>
+        <div class="nav" id="topnav"><a class="active" href="../index.html">Evan Finnigan</a><a href="../projects/index.html">Projects</a><a href="../tutorials/index.html">Tutorials</a><a href="../blog/index.html">Blog</a><a href="../contact/index.html">Contact</a><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a></div>
+      </nav>
+    </header>
+    <main class="content">
+      <h1>Portfolio Website</h1><a href="https://evanfinnigan.github.io/portfolio/">Github Pages Version</a><br><br><a href="https://github.com/evanfinnigan/portfolio">View the Project on GitHub</a><br><br><br>
+      <figure><img style="border: solid 3px black" src="../images/website.png" alt="Screenshot of portfolio website homepage">
+        <figcaption>Screenshot from the homepage</figcaption>
+      </figure><br>
+      <p>This project is my professional portfolio, it is the website which you are currently viewing. I created it with html & css, and some of the projects within it also use some javascript. I didn't use frameworks or fancy bells and whistles, keeping the project lightweight and fast to load.</p>
+      <p>The website is very fast. At the time of writing, Google's <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.evanfinnigan.com%2F">Pagespeed Insights</a> gave the website scores of 98 and 100 on the mobile and desktop versions of the page respectively.</p><img src="../images/desktop_speed_score.png" alt="Desktop Speed Score of 100"><img src="../images/mobile_speed_score.png" alt="Mobile Speed Score of 98">
+      <p>In addition to speed, a main focus of this project is learning about & implementing <a href="https://www.w3.org/TR/WCAG21/">web accessibility standards</a>. This is a work in progess as I continue to learn, but below are some evaluations of accessibility using the <a href="https://wave.webaim.org/report#/https://www.evanfinnigan.com">WebAIM WAVE</a> tool.</p>
+      <figure><img src="../images/webaim_contrast.png" alt="Contrast ratio of 13.15:1">
+        <figcaption>A contrast ratio of 13.15:1, meeting AAA standards.</figcaption>
+      </figure><br>
+      <figure><img src="../images/webaim_report.png" alt="WebAIM report showing 0 errors">
+        <figcaption>WebAIM report showing 0 errors</figcaption>
+      </figure>
+      <p>Accessibility is important because not everybody views web content the same way. Some people may view the web using a screen reader. Others use keyboard navigation to traverse a page. There are many reasons for these adaptations, but what's important is that websites and software should not create barriers for their users.</p>
+      <p>While these are some good starting points for accessibility, they don't tell the whole story. These tests have only evaluated the home page, and don't even cover most of the requirements. In order to properly evaluate the accessibility of the web page to ensure compliance, thorough manual testing is still needed. I will continue working to update the website, as there are still many things I need to improve.</p><br><br><a href="https://evanfinnigan.github.io/portfolio/">Github Pages Version</a><br><br><a href="https://github.com/evanfinnigan/portfolio">View the Project on GitHub</a>
+    </main>
+    <footer>
+      <div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://github.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/github.png" alt="github icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              GitHub
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://twitter.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/twitter.png" alt="twitter icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Twitter
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><span class="left"><img src="https://evanfinnigan.com/images/icons/instagram.png" alt="instagram icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Instagram
+                    </span></a></div><br><br><br>
+        <div class="clear" style="margin-left: -85px;">
+          <address></address>Ⓒ <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2019</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,97 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link type="text/css" rel="stylesheet" href="list.css" />
-		<meta charset="utf-8">
-		<title>prototype</title>
-	</head>
-	<body>
-		<script src="list.js"></script>
-	
-		<div class="left_column">
-			<div class="rank_box s">
-				<div class="rank_text">S</div>
-			</div>
-			<div class="rank_box a">
-				<div class="rank_text">A</div>
-			</div>
-			<div class="rank_box b">
-				<div class="rank_text">B</div>
-			</div>
-			<div class="rank_box c">
-				<div class="rank_text">C</div>
-			</div>
-			<div class="rank_box d">
-				<div class="rank_text">D</div>
-			</div>
-			<div class="rank_box e">
-				<div class="rank_text">E</div>
-			</div>
-			<div class="rank_box f">
-				<div class="rank_text">F</div>
-			</div>
-			
-		</div>
-		
-		<div class="middle_column">
-			<div id="ranked_s" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_a" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_b" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_c" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_d" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_e" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-			<div id="ranked_f" class="ranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
-		</div>
-		
-		<div class="right_column">
-			<div id="insert_item">
-				<input id="insert" type="text" placeholder="Enter Image URL...">
-				<button onclick="addItem()">+</button>
-				<button onclick="clearItems()">Clear All</button>
-			</div>
-		
-			<div id="unrank_box" class="unranked_items" ondrop="drop(event)" ondragover="allowDrop(event)">
-				<div id="emoji1" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128540;
-				</div>
-				<div id="emoji2" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128514;
-				</div>
-				<div id="emoji3" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128513;
-				</div>
-				<div id="emoji4" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128521;
-				</div>
-				<div id="emoji5" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128522;
-				</div>
-				<div id="emoji6" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128526;
-				</div>
-				<div id="emoji7" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128528;
-				</div>
-				<div id="emoji8" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128536;
-				</div>
-				<div id="emoji9" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128556;
-				</div>
-				<div id="emoji10" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128579;
-				</div>
-				<div id="emoji11" class="drag_box" draggable="true" ondragstart="drag(event)">
-					&#128580;
-				</div>
-			</div>
-		</div>
-	</body>
+  <head>
+    <link type="text/css" rel="stylesheet" href="list.css">
+    <meta charset="utf-8">
+    <title>prototype</title>
+  </head>
+  <body>
+    <script src="list.js"></script>
+    <div class="left_column">
+      <div class="rank_box s">
+        <div class="rank_text">S</div>
+      </div>
+      <div class="rank_box a">
+        <div class="rank_text">A</div>
+      </div>
+      <div class="rank_box b">
+        <div class="rank_text">B</div>
+      </div>
+      <div class="rank_box c">
+        <div class="rank_text">C</div>
+      </div>
+      <div class="rank_box d">
+        <div class="rank_text">D</div>
+      </div>
+      <div class="rank_box e">
+        <div class="rank_text">E</div>
+      </div>
+      <div class="rank_box f">
+        <div class="rank_text">F</div>
+      </div>
+    </div>
+    <div class="middle_column">
+      <div class="ranked_items" id="ranked_s" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="ranked_items" id="ranked_f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="right_column">
+      <div id="insert_item">
+        <input id="insert" type="text" placeholder="Enter Image URL...">
+        <button onclick="addItem()">+</button>
+        <button onclick="clearItems()">Clear All</button>
+      </div>
+      <div class="unranked_items" id="unrank_box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="drag_box" id="emoji1" draggable="true" ondragstart="drag(event)">
+          😜
+          
+        </div>
+        <div class="drag_box" id="emoji2" draggable="true" ondragstart="drag(event)">
+          😂
+          
+        </div>
+        <div class="drag_box" id="emoji3" draggable="true" ondragstart="drag(event)">
+          😁
+          
+        </div>
+        <div class="drag_box" id="emoji4" draggable="true" ondragstart="drag(event)">
+          😉
+          
+        </div>
+        <div class="drag_box" id="emoji5" draggable="true" ondragstart="drag(event)">
+          😊
+          
+        </div>
+        <div class="drag_box" id="emoji6" draggable="true" ondragstart="drag(event)">
+          😎
+          
+        </div>
+        <div class="drag_box" id="emoji7" draggable="true" ondragstart="drag(event)">
+          😐
+          
+        </div>
+        <div class="drag_box" id="emoji8" draggable="true" ondragstart="drag(event)">
+          😘
+          
+        </div>
+        <div class="drag_box" id="emoji9" draggable="true" ondragstart="drag(event)">
+          😬
+          
+        </div>
+        <div class="drag_box" id="emoji10" draggable="true" ondragstart="drag(event)">
+          🙃
+          
+        </div>
+        <div class="drag_box" id="emoji11" draggable="true" ondragstart="drag(event)">🙄</div>
+      </div>
+    </div>
+  </body>
 </html>
