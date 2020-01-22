@@ -6,7 +6,7 @@ html(lang='en')
     meta(name='description' content='Evan Finnigan\'s')
     title Blog
       
-      
+
   body
     header
       +nav('..')
@@ -24,6 +24,28 @@ html(lang='en')
         a.nofocus(href='https://www.instagram.com/evanfinnigan/')
           img(src='../images/icons/instagram.png' alt='instagram icon' height='64' width='64')
 
+      .blogpost#3
+        h2 Pug & New Projects
+        p 22/01/2020
+        p
+          | I've updated this website, so it now uses 
+          a(href='https://pugjs.org/api/getting-started.html') pug
+          |  template code to render the HTML. This allows for code reuse and ease of maintenance. I'm using pug locally using the pug-cli and a bash script, which allows me to keep the website as static using simple HTML files, and eliminates the need for a web server.
+        p
+          | I used a tool called 
+          a(href='https://www.npmjs.com/package/html2pug') html2pug
+          |  along with a bash script to transform my hand-written HTML into pug templates. This was extremely helpful, as it meant I didn't have to rewrite my entire website in a new language. I then cleaned up the pug files to make sure they worked correctly, and did some refactoring and moved common code into separate pug files and mixins.
+          | I like this new project structure, and I think it may be helpful for others, so I might go into more detail in a future tutorial.
+        p
+          | In other news, I recently participated in the 
+          a(href='https://itch.io/jam/wowie-jam') Wowie! Game Jam
+          | . I use the term 
+          em participated
+          |  somewhat loosely, as I didn't actually submit my game. I ended up having to work over the weekend, so I wasn't able to finish. I'm ok with not having submitted the project though, as I mostly just wanted to shake off the rust and get some practise, since I've recently been busy applying to jobs and haven't taken enough time to work on projects.
+          | I will probably be uploading the game here soon, so look out for something piano-related in the 
+          a(href='/projects') projects
+          |  section. I plan to do more game jams and small-scope projects in the near future, and hopefully can work on some useful new tutorials.
+          p - Evan
       .blogpost#2
         h2 Update!
         p 03/10/2019
