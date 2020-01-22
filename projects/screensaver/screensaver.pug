@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+  head
+    include ../../common/meta.pug
+    meta(name='description' content='Screen Saver by Evan Finnigan')
+    title Screen Saver
+    link(rel='stylesheet' type='text/css' href='./screensaver.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap' rel='stylesheet')
+  body
+    script(src='./screensaver.js')
+    main.content
+      h1#clock
+      p#seconds

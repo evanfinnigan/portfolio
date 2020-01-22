@@ -1,0 +1,28 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    include ../common/meta.pug
+    meta(name='description' content='Tutorials by Evan Finnigan')
+    title Tutorials
+      
+  body
+    header
+      +nav('..')
+    main.content
+      h1 Tutorials
+      .social
+        a.nofocus(href='https://github.com/evanfinnigan')
+          img(src='../images/icons/github.png' alt='github icon' height='64' width='64')
+        a.nofocus(href='https://twitter.com/evanfinnigan')
+          img(src='../images/icons/twitter.png' alt='twitter icon' height='64' width='64')
+        a.nofocus(href='https://www.instagram.com/evanfinnigan/')
+          img(src='../images/icons/instagram.png' alt='instagram icon' height='64' width='64')
+      p This tutorial goes into detail about the creation process for the Bin Packing project. Check back for more tutorials in the future!
+      br
+      br
+      .short-preview
+        a.nofocus(href='bin-packing.html')
+          img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin packing tutorial.')
+        a(href='bin-packing.html') Bin Packing Tutorial
+    include ../common/footer.pug

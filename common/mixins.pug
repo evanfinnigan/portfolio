@@ -1,0 +1,12 @@
+mixin nav(path)
+  //  Nav bar based on w3schools tutorials 
+  //  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp 
+  //  https://www.w3schools.com/css/css_navbar.asp 
+  nav
+    .nav#topnav
+      a.active(href=path + '/index.html') Evan Finnigan
+      a(href=path + '/projects/index.html') Projects
+      a(href=path + '/tutorials/index.html') Tutorials
+      a(href=path + '/blog/index.html') Blog
+      a(href=path + '/contact/index.html') Contact
+      a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
