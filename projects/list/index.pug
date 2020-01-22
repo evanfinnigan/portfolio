@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+  head
+    link(type='text/css' rel='stylesheet' href='list.css')
+    meta(charset='utf-8')
+    title prototype
+  body
+    script(src='list.js')
+    .left_column
+      .rank_box.s
+        .rank_text S
+      .rank_box.a
+        .rank_text A
+      .rank_box.b
+        .rank_text B
+      .rank_box.c
+        .rank_text C
+      .rank_box.d
+        .rank_text D
+      .rank_box.e
+        .rank_text E
+      .rank_box.f
+        .rank_text F
+    .middle_column
+      #ranked_s.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_a.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_b.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_c.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_d.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_e.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+      #ranked_f.ranked_items(ondrop='drop(event)' ondragover='allowDrop(event)').
+        
+        
+    .right_column
+      #insert_item
+        input#insert(type='text' placeholder='Enter Image URL...')
+        button(onclick='addItem()') +
+        button(onclick='clearItems()') Clear All
+      #unrank_box.unranked_items(ondrop='drop(event)' ondragover='allowDrop(event)')
+        #emoji1.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😜
+          
+        #emoji2.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😂
+          
+        #emoji3.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😁
+          
+        #emoji4.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😉
+          
+        #emoji5.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😊
+          
+        #emoji6.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😎
+          
+        #emoji7.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😐
+          
+        #emoji8.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😘
+          
+        #emoji9.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          😬
+          
+        #emoji10.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          🙃
+          
+        #emoji11.drag_box(draggable='true' ondragstart='drag(event)').
+          
+          🙄
+          
