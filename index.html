@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://evanfinnigan.com/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"/>
     <!--  Nav bar based on w3schools tutorials -->
     <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
     <!--  https://www.w3schools.com/css/css_navbar.asp -->
     <script>
       function navDropDown() {
-            var x = document.getElementById("topnav");
-            if (x.className === "nav") {
-              x.className += " responsive";
-            } else {
-              x.className = "nav";
-            }
-          }
+        var x = document.getElementById("topnav");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
     </script>
     <meta name="description" content="Evan Finnigan's Professional Portfolio">
     <title>Evan Finnigan</title>
@@ -50,14 +50,47 @@
           <li>Dean's Honor List <span class="date-right">2015/2016</span></li>
           <li>Dean's Honor List <span class="date-right">2017/2018</span></li>
         </ul>
+        <hr>
+        <h3>Certifications</h3>
+        <div style="overflow-x:auto;">
+          <table>
+            <tbody>
+              <tr>
+                <td>Nonviolent Crisis Intervention</td>
+                <td class="hide-column"><a href="https://www.crisisprevention.com/">Crisis Prevention Institute</a></td>
+                <td class="hide-column text-right">15/06/2019</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.acctinfo.org/">ACCT</a> Level 1 - Full</td>
+                <td class="hide-column"><a href="http://adventureworks.org/">Adventureworks! Assoc. Inc.</a></td>
+                <td class="hide-column text-right">26/05/2019</td>
+              </tr>
+              <tr>
+                <td>Mental Health First Aid Training</td>
+                <td class="hide-column"><a href="https://www.mhfa.ca/">Mental Health First Aid Canada</a></td>
+                <td class="hide-column text-right">31/03/2019</td>
+              </tr>
+              <tr>
+                <td><a href="/documents/first_aid_cert.pdf">Standard First Aid & CPR C</a></td>
+                <td class="hide-column"><a href="https://www.redcross.ca/">Canadian Red Cross</a></td>
+                <td class="hide-column text-right">15/06/2018</td>
+              </tr>
+              <tr>
+                <td>Ontario Driver's licence, Class G</td>
+                <td class="hide-column"><a href="https://www.ontario.ca/page/drivers-licence">Service Ontario</a></td>
+                <td class="hide-column text-right">14/01/2016</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="resume card">
         <h2>Work Experience</h2>
         <hr>
         <div>
-          <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a></h3>
-          <p>At RP4K, I taught math & programming to students between grade 2 and grade 10. I love teaching and really enjoyed being able to share my knowledge. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making games.</p>
-          <p>While instructing at RP4K, I taught the following courses:</p>
+          <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a> (2018 / 2019)</h3>
+          <p>I worked for RP4K during my final year of University. I enjoyed teaching mathematics and programming to students between grade 2 and grade 10, and helped them apply these concepts to the fun and creative task of making computer games.</p>
+          <p>At RP4K, I taught the following courses:</p>
           <ul>
             <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - a Beginner+ level course taught using Visual Basic</li>
             <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - an Intermediate level course using Java</li>
@@ -66,64 +99,48 @@
         </div>
         <hr>
         <div>
-          <h3 id="big-blue-bubble">Game Programming Intern - <a href="https://www.bigbluebubble.com/">Big Blue Bubble</a></h3>
-          <p>I worked at Big Blue Bubble for 16 months as a game programming intern, during which I gained a huge variety of experience and got to contribute to multiple industry-scale projects.</p>
-          <p>Projects I worked on at Big Blue Bubble:</p>
-          <ul>
-            <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/">My Singing Monsters</a>
+          <h3 id="big-blue-bubble">Game Programming Intern - <a href="https://www.bigbluebubble.com/">Big Blue Bubble</a> (2016 / 2017)</h3>
+          <p>I worked full time at Big Blue Bubble for 16 months as a game programming intern, between my 3rd and 4th years of University. During my internship I gained a huge variety of experience and contributed to multiple industry-scale projects.</p>
+          <div>
+            <div class="four-columns">
+              <p>Projects:</p>
               <ul>
-                <li>Updated custom android build system from using Ant to Gradle</li>
-                <li>Various bug fixes</li>
-                <li>Implemented screen recording feature for Android and iOS</li>
+                <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/">My Singing Monsters</a></li>
+                <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/">My Singing Monsters: Official Guide</a></li>
+                <li><a href="https://www.bigbluebubble.com/home/games/home-arcade/">Home Arcade</a></li>
+                <li><a href="https://www.bigbluebubble.com/home/games/concert-kings/">Concert Kings</a></li>
               </ul>
-            </li>
-            <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/">My Singing Monsters: Official Guide</a>
+            </div>
+            <div class="four-columns">
+              <p>Languages:</p>
               <ul>
-                <li>Performed data migrations using assets from other projects</li>
-                <li>Built responsive user interfaces for displaying complex information to users</li>
-                <li>Used SQL database to populate UIs with information</li>
-                <li>Implemented the majority of features in this application</li>
-                <li>Released first public build to iOS and Android app stores</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Objective-C</li>
+                <li>Gradle</li>
+                <li>Lua</li>
+                <li>Bash Scripting</li>
+                <li>SQL</li>
               </ul>
-            </li>
-            <li><a href="https://www.bigbluebubble.com/home/games/home-arcade/">Home Arcade</a>
+            </div>
+            <div class="four-columns">
+              <p>Technologies:</p>
               <ul>
-                <li>Helped to build <i>Railroaded</i> game</li>
-                <li>Implemented menus and parallax scrolling background</li>
+                <li>Unity Game Engine</li>
+                <li>Visual Studio</li>
+                <li>SVN</li>
+                <li>Jira</li>
+                <li>Bamboo</li>
+                <li>Confluence</li>
               </ul>
-            </li>
-            <li><a href="https://www.bigbluebubble.com/home/games/concert-kings/">Concert Kings</a>
-              <ul>
-                <li>Built a modular achievement system for the game, allowing players to recieve rewards for completing tasks</li>
-                <li>Achievement system allowed for sending new achievements or "daily quests" to users without updating the application</li>
-                <li>Built UI for the achievement system</li>
-                <li>Experimented with dynamic cloth simulation in Unity for character clothing</li>
-              </ul>
-            </li>
-          </ul>
-          <p>I worked with a few different languages, such as:</p>
-          <ul>
-            <li>Java</li>
-            <li>C++</li>
-            <li>C#</li>
-            <li>Objective-C</li>
-            <li>Gradle</li>
-            <li>Lua</li>
-            <li>Bash Scripting</li>
-          </ul>
-          <p>I also worked with many different technologies, including:</p>
-          <ul>
-            <li>Unity Game Engine</li>
-            <li>Visual Studio for writing code</li>
-            <li>TortoiseSVN Subversioning System</li>
-            <li>Jira for Issue tracking</li>
-            <li>Bamboo for Build automation</li>
-            <li>Confluence for Documentation</li>
-          </ul>
+            </div>
+          </div>
+          <div class="clear"></div>
         </div>
       </div>
       <div class="resume card">
-        <h2>Notable School Projects</h2>
+        <h2>School Projects</h2>
         <hr>
         <h3>Graph Algorithms (CS 3346: Artificial Intelligence I - UWO)</h3>
         <p>Language: Python</p>
@@ -192,41 +209,6 @@
           <li>Pug view engine</li>
         </ul>
         <hr><a href="projects/index.html">Other Projects</a>
-      </div>
-      <div class="resume card">
-        <h2>Certifications</h2>
-        <hr>
-        <div style="overflow-x:auto;">
-          <table>
-            <tbody>
-              <tr>
-                <td>Nonviolent Crisis Intervention</td>
-                <td class="hide-column"><a href="https://www.crisisprevention.com/">Crisis Prevention Institute</a></td>
-                <td class="hide-column text-right">15/06/2019</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.acctinfo.org/">ACCT</a> Level 1 - Full</td>
-                <td class="hide-column"><a href="http://adventureworks.org/">Adventureworks! Assoc. Inc.</a></td>
-                <td class="hide-column text-right">26/05/2019</td>
-              </tr>
-              <tr>
-                <td>Mental Health First Aid Training</td>
-                <td class="hide-column"><a href="https://www.mhfa.ca/">Mental Health First Aid Canada</a></td>
-                <td class="hide-column text-right">31/03/2019</td>
-              </tr>
-              <tr>
-                <td><a href="/documents/first_aid_cert.pdf">Standard First Aid & CPR C</a></td>
-                <td class="hide-column"><a href="https://www.redcross.ca/">Canadian Red Cross</a></td>
-                <td class="hide-column text-right">15/06/2018</td>
-              </tr>
-              <tr>
-                <td>Ontario Driver's licence, Class G</td>
-                <td class="hide-column"><a href="https://www.ontario.ca/page/drivers-licence">Service Ontario</a></td>
-                <td class="hide-column text-right">14/01/2016</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
       <div class="social"><a class="nofocus" href="documents/resume.pdf"><img src="images/icons/resume.png" alt="resume icon" height="64" width="64"></a><br><a href="documents/resume.pdf">Résumé (PDF)</a></div>
     </main>

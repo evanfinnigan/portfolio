@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://evanfinnigan.com/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"/>
     <!--  Nav bar based on w3schools tutorials -->
     <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
     <!--  https://www.w3schools.com/css/css_navbar.asp -->
     <script>
       function navDropDown() {
-            var x = document.getElementById("topnav");
-            if (x.className === "nav") {
-              x.className += " responsive";
-            } else {
-              x.className = "nav";
-            }
-          }
+        var x = document.getElementById("topnav");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
     </script>
     <meta name="description" content="Projects by Evan Finnigan">
     <title>Projects</title>
@@ -34,12 +34,38 @@
     <main class="content">
       <h1>Projects</h1>
       <p>These are some projects and games I have created. The links below provide more details about each project!</p><br><br>
-      <div class="short-preview"><a class="nofocus" href="game-engines.html"><img src="../images/thumbnails/aerial-firefighting.png" alt="Thumbnail for Game Engines project."></a><a href="game-engines.html">Game Engines Final Project</a></div>
-      <div class="short-preview"><a class="nofocus" href="bin-packing.html"><img src="../images/binpacking-thumbnail.jpg" alt="Thumbnail for Bin Packing project."></a><a href="bin-packing.html">Bin Packing</a></div>
-      <div class="short-preview"><a class="nofocus" href="website.html"><img src="../images/thumbnails/website.png" alt="Thumbnail for website."></a><a href="website.html">Portfolio Website</a></div>
-      <div class="short-preview"><a class="nofocus" href="monster-lazer.html"><img src="../images/monster-lazer-thumbnail.png" alt="Thumbnail for Monster Lazer."></a><a href="monster-lazer.html">Monster Lazer</a></div>
-      <div class="short-preview"><a class="nofocus" href="fidget.html"><img src="../images/fidget.png" alt="Thumbnail for Fidget Spinner."></a><a href="fidget.html">Fidget Spinner</a></div>
-      <div class="short-preview"><a class="nofocus" href="list/index.html"><img src="../images/thumbnails/emoji-rank.png" alt="Thumbnail for List Rank Demo."></a><a href="list/index.html">List Ranking Demo</a></div><br class="clear"><br><br><br>
+      <div class="display-case">
+        <div class="short-preview"><a href="game-engines.html">Game Engines Final Project</a><a class="nofocus" href="game-engines.html"><img src="../images/thumbnails/aerial-firefighting.png" alt="Thumbnail for Game Engines project."></a>
+          <p>Fly a plane to put out forest fires!</p>
+          <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+          </div>
+        </div>
+        <div class="short-preview"><a href="bin-packing.html">Bin Packing</a><a class="nofocus" href="bin-packing.html"><img src="../images/binpacking-thumbnail.jpg" alt="Thumbnail for Bin Packing project."></a>
+          <p>A visualization of the Bin Packing algorithm</p>
+          <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+          </div>
+        </div>
+        <div class="short-preview"><a href="website.html">Portfolio</a><a class="nofocus" href="website.html"><img src="../images/thumbnails/website.png" alt="Thumbnail for website."></a>
+          <p>My professional web portfolio</p>
+          <div class="tags"><span class="tag" style="color: #ffffff; background-color: #f16524;">HTML</span> <span class="tag" style="color: #ffffff; background-color: #2965f1;">CSS</span> <span class="tag" style="color: #ffffff; background-color: #a86454;">Pug</span> 
+          </div>
+        </div>
+        <div class="short-preview"><a href="monster-lazer.html">Monster Lazer</a><a class="nofocus" href="monster-lazer.html"><img src="../images/monster-lazer-thumbnail.png" alt="Thumbnail for Monster Lazer."></a>
+          <p>Use your laser beam to defend yourself against attacking blobs.</p>
+          <div class="tags"><span class="tag" style="color: #ffffff; background-color: #f16524;">HTML</span> <span class="tag" style="color: #363536; background-color: #fbd601;">JavaScript</span> 
+          </div>
+        </div>
+        <div class="short-preview"><a href="fidget.html">Fidget Spinner</a><a class="nofocus" href="fidget.html"><img src="../images/fidget.png" alt="Thumbnail for Fidget Spinner."></a>
+          <p>Be the coolest kid in 6th grade!</p>
+          <div class="tags"><span class="tag" style="color: #000000; background-color: #00e755;">Pico-8</span> 
+          </div>
+        </div>
+        <div class="short-preview"><a href="list/index.html">List Ranking</a><a class="nofocus" href="list/index.html"><img src="../images/thumbnails/emoji-rank.png" alt="Thumbnail for List Rank Demo."></a>
+          <p>Rank fast food restaurants, programming languages, emoji, or anything you want.</p>
+          <div class="tags"><span class="tag" style="color: #ffffff; background-color: #f16524;">HTML</span> <span class="tag" style="color: #363536; background-color: #fbd601;">JavaScript</span> 
+          </div>
+        </div>
+      </div><br class="clear"><br><br><br>
       <p>Check back for more projects in the future.</p>
     </main>
     <footer>
