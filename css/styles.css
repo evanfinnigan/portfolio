@@ -307,11 +307,17 @@ table {
 }
 
 .tag {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: bold;
 	color: #ffffff;
 	background-color: rgb(148, 26, 44);
 	border-radius: 5px;
 	padding: 5px;
-	font-size: 0.8em;
+	font-size: .8em;
+}
+
+.resume .tag {
+	font-size: 1em;
 }
 
 .intro img {
