@@ -10,3 +10,34 @@ mixin nav(path)
       a(href=path + '/blog/index.html') Blog
       a(href=path + '/contact/index.html') Contact
       a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
+
+mixin meta(path)
+  link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
+  include meta.pug
+
+mixin tag(t)
+  case t
+    when 'HTML'
+      span.tag(style='color: #ffffff; background-color: #f16524;') #{t}
+    when 'CSS'
+      span.tag(style='color: #ffffff; background-color: #2965f1;') #{t}
+    when 'Pico-8'
+      span.tag(style='color: #000000; background-color: #00e755;') #{t}
+    when 'Unity'
+      span.tag(style='color: #000000; background-color: #ffffff;') #{t}
+    when 'C#'
+      span.tag(style='color: #ffffff; background-color: #813084;') #{t}
+    when 'Pug'
+      span.tag(style='color: #ffffff; background-color: #a86454;') #{t}
+    when 'JavaScript'
+      span.tag(style='color: #363536; background-color: #fbd601;') #{t}
+    default
+      span.tag #{t}
+      
+
+mixin tags(...t)
+  div.tags
+    each tag in t
+      +tag(tag)
+      | 
+

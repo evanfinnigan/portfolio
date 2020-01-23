@@ -2,7 +2,7 @@ include ../common/mixins.pug
 doctype html
 html(lang='en')
   head
-    include ../common/meta.pug
+    +meta('..')
     meta(name='description' content='Projects by Evan Finnigan')
     title Projects
       
@@ -15,30 +15,50 @@ html(lang='en')
       p These are some projects and games I have created. The links below provide more details about each project!
       br
       br
-      .short-preview
-        a.nofocus(href='game-engines.html')
-          img(src='../images/thumbnails/aerial-firefighting.png' alt='Thumbnail for Game Engines project.')
-        a(href='game-engines.html') Game Engines Final Project
-      .short-preview
-        a.nofocus(href='bin-packing.html')
-          img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin Packing project.')
-        a(href='bin-packing.html') Bin Packing
-      .short-preview
-        a.nofocus(href='website.html')
-          img(src='../images/thumbnails/website.png' alt='Thumbnail for website.')
-        a(href='website.html') Portfolio Website
-      .short-preview
-        a.nofocus(href='monster-lazer.html')
-          img(src='../images/monster-lazer-thumbnail.png' alt='Thumbnail for Monster Lazer.')
-        a(href='monster-lazer.html') Monster Lazer
-      .short-preview
-        a.nofocus(href='fidget.html')
-          img(src='../images/fidget.png' alt='Thumbnail for Fidget Spinner.')
-        a(href='fidget.html') Fidget Spinner
-      .short-preview
-        a.nofocus(href='list/index.html')
-          img(src='../images/thumbnails/emoji-rank.png' alt='Thumbnail for List Rank Demo.')
-        a(href='list/index.html') List Ranking Demo
+      
+      .display-case
+        .short-preview
+          a(href='game-engines.html') Game Engines Final Project
+          a.nofocus(href='game-engines.html')
+            img(src='../images/thumbnails/aerial-firefighting.png' alt='Thumbnail for Game Engines project.')
+          p Fly a plane to put out forest fires!
+          +tags('Unity','C#')
+          
+        .short-preview
+          a(href='bin-packing.html') Bin Packing
+          a.nofocus(href='bin-packing.html')
+            img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin Packing project.')
+          p A visualization of the Bin Packing algorithm
+          +tags('Unity','C#')
+          
+        .short-preview
+          a(href='website.html') Portfolio
+          a.nofocus(href='website.html')
+            img(src='../images/thumbnails/website.png' alt='Thumbnail for website.')
+          p My professional web portfolio
+          +tags('HTML', 'CSS', 'Pug')
+
+        .short-preview
+          a(href='monster-lazer.html') Monster Lazer
+          a.nofocus(href='monster-lazer.html')
+            img(src='../images/monster-lazer-thumbnail.png' alt='Thumbnail for Monster Lazer.')
+          p Use your laser beam to defend yourself against attacking blobs.
+          +tags('HTML','JavaScript')
+          
+        .short-preview
+          a(href='fidget.html') Fidget Spinner
+          a.nofocus(href='fidget.html')
+            img(src='../images/fidget.png' alt='Thumbnail for Fidget Spinner.')
+          p Be the coolest kid in 6th grade!
+          +tags('Pico-8')
+          
+        .short-preview
+          a(href='list/index.html') List Ranking
+          a.nofocus(href='list/index.html')
+            img(src='../images/thumbnails/emoji-rank.png' alt='Thumbnail for List Rank Demo.')
+          p Rank fast food restaurants, programming languages, emoji, or anything you want.
+          +tags('HTML', 'JavaScript')
+
       br.clear
       br
       br

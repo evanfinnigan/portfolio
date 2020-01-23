@@ -2,7 +2,7 @@ include ../common/mixins.pug
 doctype html
 html(lang='en')
   head
-    include ../common/meta.pug
+    +meta('..')
     meta(name='description' content='Tutorials by Evan Finnigan')
     title Tutorials
       
@@ -22,7 +22,10 @@ html(lang='en')
       br
       br
       .short-preview
+        a(href='bin-packing.html') Bin Packing Tutorial
         a.nofocus(href='bin-packing.html')
           img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin packing tutorial.')
-        a(href='bin-packing.html') Bin Packing Tutorial
+        p A tutorial on animating variations of the Bin Packing algorithm.
+        +tags('Unity', 'C#')
+        
     include ../common/footer.pug

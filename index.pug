@@ -2,7 +2,7 @@ include common/mixins.pug
 doctype html
 html(lang='en')
   head
-    include common/meta.pug
+    +meta('.')
     meta(name='description' content='Evan Finnigan\'s Professional Portfolio')
     title Evan Finnigan
       
@@ -52,6 +52,39 @@ html(lang='en')
           li
             | Dean's Honor List 
             span.date-right 2017/2018
+        hr
+        h3 Certifications
+        div(style='overflow-x:auto;')
+          table
+            tbody
+              tr
+                td Nonviolent Crisis Intervention
+                td.hide-column
+                  a(href='https://www.crisisprevention.com/') Crisis Prevention Institute
+                td.hide-column.text-right 15/06/2019
+              tr
+                td
+                  a(href='https://www.acctinfo.org/') ACCT
+                  |  Level 1 - Full
+                td.hide-column
+                  a(href='http://adventureworks.org/') Adventureworks! Assoc. Inc.
+                td.hide-column.text-right 26/05/2019
+              tr
+                td Mental Health First Aid Training
+                td.hide-column
+                  a(href='https://www.mhfa.ca/') Mental Health First Aid Canada
+                td.hide-column.text-right 31/03/2019
+              tr
+                td
+                  a(href='/documents/first_aid_cert.pdf') Standard First Aid & CPR C
+                td.hide-column
+                  a(href='https://www.redcross.ca/') Canadian Red Cross
+                td.hide-column.text-right 15/06/2018
+              tr
+                td Ontario Driver's licence, Class G
+                td.hide-column
+                  a(href='https://www.ontario.ca/page/drivers-licence') Service Ontario
+                td.hide-column.text-right 14/01/2016
 
       .resume.card
         h2 Work Experience
@@ -60,8 +93,9 @@ html(lang='en')
           h3#rp4k
             | Instructor - 
             a(href='https://realprogramming.com/') Real Programming 4 Kids
-          p At RP4K, I taught math & programming to students between grade 2 and grade 10. I love teaching and really enjoyed being able to share my knowledge. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making games.
-          p While instructing at RP4K, I taught the following courses:
+            |  (2018 / 2019)
+          p I worked for RP4K during my final year of University. I enjoyed teaching mathematics and programming to students between grade 2 and grade 10, and helped them apply these concepts to the fun and creative task of making computer games.
+          p At RP4K, I taught the following courses:
           ul
             li
               a(href='https://www.youtube.com/watch?v=nlzYhy-0au4') Pizza Bandit
@@ -77,58 +111,47 @@ html(lang='en')
           h3#big-blue-bubble
             | Game Programming Intern - 
             a(href='https://www.bigbluebubble.com/') Big Blue Bubble
-          p I worked at Big Blue Bubble for 16 months as a game programming intern, during which I gained a huge variety of experience and got to contribute to multiple industry-scale projects.
-          p Projects I worked on at Big Blue Bubble:
-          ul
-            li
-              a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/') My Singing Monsters
-              ul
-                li Updated custom android build system from using Ant to Gradle
-                li Various bug fixes
-                li Implemented screen recording feature for Android and iOS
-            li
-              a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/') My Singing Monsters: Official Guide
-              ul
-                li Performed data migrations using assets from other projects
-                li Built responsive user interfaces for displaying complex information to users
-                li Used SQL database to populate UIs with information
-                li Implemented the majority of features in this application
-                li Released first public build to iOS and Android app stores
-            li
-              a(href='https://www.bigbluebubble.com/home/games/home-arcade/') Home Arcade
+            |  (2016 / 2017)
+          p I worked full time at Big Blue Bubble for 16 months as a game programming intern, between my 3rd and 4th years of University. During my internship I gained a huge variety of experience and contributed to multiple industry-scale projects.
+          div
+            .four-columns
+              p Projects:
               ul
                 li
-                  | Helped to build 
-                  i Railroaded
-                  |  game
-                li Implemented menus and parallax scrolling background
-            li
-              a(href='https://www.bigbluebubble.com/home/games/concert-kings/') Concert Kings
+                  a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/') My Singing Monsters
+
+                li
+                  a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/') My Singing Monsters: Official Guide
+
+                li
+                  a(href='https://www.bigbluebubble.com/home/games/home-arcade/') Home Arcade
+
+                li
+                  a(href='https://www.bigbluebubble.com/home/games/concert-kings/') Concert Kings
+            .four-columns
+              p Languages:
               ul
-                li Built a modular achievement system for the game, allowing players to recieve rewards for completing tasks
-                li Achievement system allowed for sending new achievements or "daily quests" to users without updating the application
-                li Built UI for the achievement system
-                li Experimented with dynamic cloth simulation in Unity for character clothing
-          p I worked with a few different languages, such as:
-          ul
-            li Java
-            li C++
-            li C#
-            li Objective-C
-            li Gradle
-            li Lua
-            li Bash Scripting
-          p I also worked with many different technologies, including:
-          ul
-            li Unity Game Engine
-            li Visual Studio for writing code
-            li TortoiseSVN Subversioning System
-            li Jira for Issue tracking
-            li Bamboo for Build automation
-            li Confluence for Documentation
+                li Java
+                li C++
+                li C#
+                li Objective-C
+                li Gradle
+                li Lua
+                li Bash Scripting
+                li SQL
+            .four-columns
+              p Technologies:
+              ul
+                li Unity Game Engine
+                li Visual Studio
+                li SVN
+                li Jira
+                li Bamboo
+                li Confluence
+          .clear
 
       .resume.card
-        h2 Notable School Projects
+        h2 School Projects
         hr
         h3 Graph Algorithms (CS 3346: Artificial Intelligence I - UWO)
         p Language: Python
@@ -208,40 +231,7 @@ html(lang='en')
           li Pug view engine
         hr
         a(href='projects/index.html') Other Projects
-      .resume.card
-        h2 Certifications
-        hr
-        div(style='overflow-x:auto;')
-          table
-            tbody
-              tr
-                td Nonviolent Crisis Intervention
-                td.hide-column
-                  a(href='https://www.crisisprevention.com/') Crisis Prevention Institute
-                td.hide-column.text-right 15/06/2019
-              tr
-                td
-                  a(href='https://www.acctinfo.org/') ACCT
-                  |  Level 1 - Full
-                td.hide-column
-                  a(href='http://adventureworks.org/') Adventureworks! Assoc. Inc.
-                td.hide-column.text-right 26/05/2019
-              tr
-                td Mental Health First Aid Training
-                td.hide-column
-                  a(href='https://www.mhfa.ca/') Mental Health First Aid Canada
-                td.hide-column.text-right 31/03/2019
-              tr
-                td
-                  a(href='/documents/first_aid_cert.pdf') Standard First Aid & CPR C
-                td.hide-column
-                  a(href='https://www.redcross.ca/') Canadian Red Cross
-                td.hide-column.text-right 15/06/2018
-              tr
-                td Ontario Driver's licence, Class G
-                td.hide-column
-                  a(href='https://www.ontario.ca/page/drivers-licence') Service Ontario
-                td.hide-column.text-right 14/01/2016
+      
       .social
         a.nofocus(href='documents/resume.pdf')
           img(src='images/icons/resume.png' alt='resume icon' height='64' width='64')
