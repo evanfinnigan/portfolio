@@ -1,0 +1,36 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='Stack Attack! by Evan Finnigan')
+    title Stack Attack!
+      
+  body
+    header
+      +nav('..')
+    main.content
+      h1 Stack Attack!
+      // a(href='https://evanfinnigan.github.io/aerial-firefighting/') Web Demo
+      br
+      br
+      // a(href='https://github.com/evanfinnigan/aerial-firefighting') View the Project on Github
+      br
+      br
+      figure
+        img(src='../images/stack-attack.png' alt='Screenshot of Stack Attack!')
+        figcaption Design Concept Image for 
+          em  Stack Attack!
+      br
+      p
+        em Stack Attack! 
+        |  is the couch co-op brawler you've always dreamed about! Make alliances and become more powerful by stacking together with other players! Betray those alliances and battle head-to-head for ultimate victory! Work together, but trust nobody.
+      p This was a fun project put together for the Game Development Project course, CS 4480Y, at UWO.
+      p Screenshots, links, and further information to come.
+      br
+      br
+      // a(href='https://evanfinnigan.github.io/aerial-firefighting/') Web Demo
+      br
+      br
+      // a(href='https://github.com/evanfinnigan/aerial-firefighting') View the Project on Github
+    include ../common/footer.pug

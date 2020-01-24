@@ -12,7 +12,7 @@ html(lang='en')
     main.content
       h1 Projects
 
-      p These are some projects and games I have created. The links below provide more details about each project!
+      p These are some of the projects and games I have created. The links below provide more details about each project.
       br
       br
       
@@ -22,14 +22,14 @@ html(lang='en')
           a.nofocus(href='game-engines.html')
             img(src='../images/thumbnails/aerial-firefighting.png' alt='Thumbnail for Game Engines project.')
           p Fly a plane to put out forest fires!
-          +tags('Unity','C#')
+          +tags('Unity','C#', 'UWO')
           
         .short-preview
           a(href='bin-packing.html') Bin Packing
           a.nofocus(href='bin-packing.html')
             img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin Packing project.')
           p A visualization of the Bin Packing algorithm
-          +tags('Unity','C#')
+          +tags('Unity','C#', 'UWO')
           
         .short-preview
           a(href='website.html') Portfolio
@@ -37,6 +37,41 @@ html(lang='en')
             img(src='../images/thumbnails/website.png' alt='Thumbnail for website.')
           p My professional web portfolio
           +tags('HTML', 'CSS', 'Pug')
+
+        .short-preview
+          a(href='stack-attack.html') Stack Attack
+          a.nofocus(href='stack-attack.html')
+            img(src='../images/thumbnails/stack-attack.png' alt='Thumbnail for Stack Attack!')
+          p A local-multiplayer brawler / totem-pole simulator
+          +tags('Unity', 'C#', 'UWO')
+
+        .short-preview
+          a(href='vikings.html') Sjøkrigere
+          a.nofocus(href='vikings.html')
+            img(src='../images/thumbnails/vikings.png' alt='Thumbnail for sjøkrigere.')
+          p A retro viking adventure game
+          +tags('Unity', 'C#')
+
+        .short-preview
+          a(href='graph-algorithms.html') Graph Algorithms
+          a.nofocus(href='graph-algorithms.html')
+            img(src='../images/pacman_game.gif' alt='Thumbnail for graph algorithms.')
+          p An introductory AI project
+          +tags('Python', 'AI', 'UWO')
+
+        .short-preview
+          a(href='ray-tracer.html') Ray Tracer
+          a.nofocus(href='ray-tracer.html')
+            img(src='../images/thumbnails/ray-tracer.jpg' alt='Thumbnail for ray tracer.')
+          p A basic graphics engine built in C
+          +tags('C', 'UWO')
+
+        .short-preview
+          a(href='weather.html') Weather Application
+          a.nofocus(href='weather.html')
+            img(src='../images/thumbnails/weather.png' alt='Thumbnail for graph algorithms.')
+          p One of my first software projects from University.
+          +tags('Java', 'UWO')
 
         .short-preview
           a(href='monster-lazer.html') Monster Lazer

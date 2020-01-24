@@ -1,0 +1,33 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='AI Project by Evan Finnigan')
+    title Graph Algorithms & AI
+      
+  body
+    header
+      +nav('..')
+    main.content
+      h1 Graph Algorithms & AI
+      br
+      br
+      span An introductory AI project
+      br
+      p During this project, I implemented the following algorithms in python:
+      ul(style='text-align:left')
+        li Depth First Search
+        li Breadth First Search
+        li Uniform Cost Search
+        li A* Search
+        li Minimax with Alpha/Beta Pruning
+      
+      p This project famously originates from 
+        a(href='http://ai.berkeley.edu/project_overview.html')  CS188 at UC Berkely
+        | .
+      p I did this project a number of years ago, so I am currently trying to locate the project files. They may be lost to the sands of time. If I locate them, I may post a post more about it.
+      br
+      +tags('Python', 'AI', 'UWO')
+
+    include ../common/footer.pug

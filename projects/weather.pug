@@ -1,0 +1,33 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='Weather Application by Evan Finnigan')
+    title Weather Application
+      
+  body
+    header
+      +nav('..')
+    main.content
+      h1 Weather Application
+      a(href='weather/team7-1.0-jar-with-dependencies.jar') Download JAR file
+      br
+      br
+      a(href='https://github.com/evanfinnigan/team7') View the Project on Github
+      br
+      br
+      figure
+        img(src='../images/weather.png' alt='Screenshot of Weather application')
+        figcaption Today's weather, January 24th 2020. It's 0 degrees in Toronto!
+      br
+      p It's just a basic weather application, but this was a good exercise in learning about software development early on.
+      p Note that this project has not been maintained, and some APIs used no longer respond.
+      p At the time of writing, the main weather functionality of the program works, but Mars weather does not.
+      br
+      br
+      a(href='weather/team7-1.0-jar-with-dependencies.jar') Download JAR file
+      br
+      br
+      a(href='https://github.com/evanfinnigan/team7') View the Project on Github
+    include ../common/footer.pug

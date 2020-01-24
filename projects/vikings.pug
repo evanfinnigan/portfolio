@@ -1,0 +1,37 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='Retro Vikings Game by Evan Finnigan')
+    title Sjøkrigere
+      
+  body
+    header
+      +nav('..')
+    main.content
+      h1 Sjøkrigere
+      a(href='https://raw.githubusercontent.com/evanfinnigan/cs4483_project/master/vikings-windows.zip') Windows Build
+      br 
+      a(href='https://raw.githubusercontent.com/evanfinnigan/cs4483_project/master/vikings-mac.zip') Mac Build 
+      br
+      br
+      a(href='https://github.com/evanfinnigan/cs4483_project') View the Project on Github
+      br
+      br
+      figure
+        img(src='../images/vikings.png' alt='Screenshot of ')
+        figcaption Screenshot
+      br
+      p Sjøkrigere is a retro-style game in which the player explores the seas in a viking ship, battles sea monsters, and pillages towns for supplies and crew.
+      p I created the game design for this project on my own, but the implementation was done as a group project.
+      p More screenshots, links, and further information to come.
+      br
+      br
+      a(href='https://raw.githubusercontent.com/evanfinnigan/cs4483_project/master/vikings-windows.zip') Windows Build 
+      br
+      a(href='https://raw.githubusercontent.com/evanfinnigan/cs4483_project/master/vikings-mac.zip') Mac Build 
+      br
+      br
+      a(href='https://github.com/evanfinnigan/cs4483_project') View the Project on Github
+    include ../common/footer.pug
