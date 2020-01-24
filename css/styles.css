@@ -413,7 +413,8 @@ table {
 }
 
 .short-preview p {
-  height: 6em;
+	height: 6em;
+	width: 80%;
 }
 
 .tags {
