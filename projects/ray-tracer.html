@@ -18,6 +18,24 @@
           x.className = "nav";
         }
       }
+      
+      function toggleCollapsed(id, btnId) {
+        var btn = document.getElementById(btnId);
+        var content = document.getElementById(id);
+        if (content != null) {
+          if (content.getAttribute("class") == "notcollapsed") {
+            content.setAttribute("class", "collapsed");
+            if (btn != null) {
+              btn.innerText = "+";
+            }
+          } else {
+            content.setAttribute("class", "notcollapsed");
+            if (btn != null) {
+              btn.innerText = "-";
+            }
+          }
+        }
+      }
     </script>
     <meta name="description" content="Ray Tracer by Evan Finnigan">
     <title>Ray Tracer</title>

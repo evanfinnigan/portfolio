@@ -18,6 +18,24 @@
           x.className = "nav";
         }
       }
+      
+      function toggleCollapsed(id, btnId) {
+        var btn = document.getElementById(btnId);
+        var content = document.getElementById(id);
+        if (content != null) {
+          if (content.getAttribute("class") == "notcollapsed") {
+            content.setAttribute("class", "collapsed");
+            if (btn != null) {
+              btn.innerText = "+";
+            }
+          } else {
+            content.setAttribute("class", "notcollapsed");
+            if (btn != null) {
+              btn.innerText = "-";
+            }
+          }
+        }
+      }
     </script>
     <meta name="description" content="Evan Finnigan's Professional Portfolio">
     <title>Evan Finnigan</title>
@@ -86,64 +104,32 @@
         </div>
       </div>
       <div class="resume card">
-        <h2>Primary Work Experience</h2>
-        <hr>
-        <div>
-          <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a> (2018 / 2019)</h3>
-          <p>I worked for RP4K during my final year of University. I enjoyed teaching mathematics and programming to students between grade 2 and grade 10, and helped them apply these concepts to the fun and creative task of making computer games.</p>
-          <p>At RP4K, I taught the following courses:</p>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - a Beginner+ level course taught using Visual Basic</li>
-            <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - an Intermediate level course using Java</li>
-            <li><a href="https://www.youtube.com/watch?v=G_E4z0kGrsE">Sharp Shooter</a> - an Intermediate+ level course using C#</li>
-          </ul>
-        </div>
+        <h2>Work Experience</h2>
         <hr>
         <div>
           <h3 id="big-blue-bubble">Game Programming Intern - <a href="https://www.bigbluebubble.com/">Big Blue Bubble</a> (2016 / 2017)</h3>
-          <p>I worked full time at Big Blue Bubble for 16 months as a game programming intern, between my 3rd and 4th years of University. During my internship I gained a huge variety of experience and contributed to multiple industry-scale projects.</p>
+          <p>At Big Blue Bubble I developed mobile games and experienced the full process of software development from concept to release. I wrote code in Java, C++, C#, and Objective-C. I worked with Visual Studio, SVN, Unity, Jira, Bamboo, and Confluence.</p>
           <div>
-            <div class="four-columns">
-              <p>Projects:</p>
-              <ul>
-                <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/">My Singing Monsters</a></li>
-                <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/">My Singing Monsters: Official Guide</a></li>
-                <li><a href="https://www.bigbluebubble.com/home/games/home-arcade/">Home Arcade</a></li>
-                <li><a href="https://www.bigbluebubble.com/home/games/concert-kings/">Concert Kings</a></li>
-              </ul>
-            </div>
-            <div class="four-columns">
-              <p>Languages:</p>
-              <ul>
-                <li>Java</li>
-                <li>C++</li>
-                <li>C#</li>
-                <li>Objective-C</li>
-                <li>Gradle</li>
-                <li>Lua</li>
-                <li>Bash Scripting</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div class="four-columns">
-              <p>Technologies:</p>
-              <ul>
-                <li>Unity Game Engine</li>
-                <li>Visual Studio</li>
-                <li>SVN</li>
-                <li>Jira</li>
-                <li>Bamboo</li>
-                <li>Confluence</li>
-              </ul>
-            </div>
+            <p>During my internship I contributed to the following mobile games and applications:</p>
+            <ul>
+              <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/">My Singing Monsters</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/">My Singing Monsters: Official Guide</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/home-arcade/">Home Arcade</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/concert-kings/">Concert Kings</a></li>
+            </ul>
           </div>
-          <div class="clear"></div>
         </div>
-        <hr><br>
-        <h2>Other Work Experience</h2>
         <hr>
-        <h3>Website Design & Development - <a href="http://www.sosgreatlakes.org/">SOS Great Lakes (November 2019 - Present)</a></h3>
-        <p>I am currently managing the website for SOS Great Lakes on a part-time contract basis. I've primarily worked on accessibility features, content updates.</p>
+        <div>
+          <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a> (2018 / 2019)</h3>
+          <p>At RP4k I taught math & programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. </p>
+          <p>At RP4K, I taught the following courses:</p>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - teaching the fundamentals of programming by making a Pac-Man re-skin using Visual Basic</li>
+            <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - teaching Object-Oriented Programming by recreating the classic arcade game in Java</li>
+            <li><a href="https://www.youtube.com/watch?v=G_E4z0kGrsE">Sharp Shooter</a> - teaching Vector math and testing students programming skills by making a top-down shooter in C#</li>
+          </ul>
+        </div>
         <hr>
         <h3>Resource Team - Canterbury Hills Camp (Summer 2019)</h3>
         <p>As a member of the Resource Team, my job was to be an all-encompassing resource for all staff and campers. As this was both an overnight camp and a day camp, this role was very involved, as I worked and lived at the camp for the entirety of each week.</p>
@@ -156,9 +142,12 @@
           <li>Fulfilled roles as a certified Assistant Ropes Course Instructor (ACCT Level 1) including setting up & taking down belay systems and general ropes course supervision</li>
         </ul>
         <hr>
+        <h3>Website Design & Development - <a href="http://www.sosgreatlakes.org/">SOS Great Lakes (November 2019 - Present)</a></h3>
+        <p>I am currently managing the website for SOS Great Lakes on a part-time contract basis. I've primarily worked on accessibility features, content updates.</p>
+        <hr>
         <p>Landscaping Technician - Cassel Care Lawn Services (Summer 2014, Summer 2015)</p>
-        <p>Cashier - Canadian Tire (Spring & Summer 2013)</p>
         <p>Overnight Cabin Leader - Canterbury Hills Camp (Summer 2010 - Summer 2012, Summer 2018)</p>
+        <p>Cashier - Canadian Tire (Spring & Summer 2013)</p>
       </div>
       <div class="resume card">
         <h2>School Projects</h2>
