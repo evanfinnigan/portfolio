@@ -29,7 +29,7 @@ function populateRSS(feedURL) {
     }
 
     if (feed.items.length > 0) {
-      htmlString += `<h1>${feed.title}</h1>`;
+      htmlString += `<h1>${feed.title}</h1><br>`;
     }
     
 
@@ -50,7 +50,7 @@ function populateRSS(feedURL) {
       var d = new Date(entry.isoDate);
       htmlString += '<p>' + d.toDateString() + '</p>';
 
-      htmlString += '</div><hr>';
+      htmlString += '</div><hr><br><br>';
 
     });
 
