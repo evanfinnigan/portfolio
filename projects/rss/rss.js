@@ -29,7 +29,7 @@ function populateRSS(feedURL) {
     }
 
     if (feed.items.length > 0) {
-      htmlString += `<h1>${feed.title}</h1><br>`;
+      htmlString += `<h1 style="color: black; text-transform: uppercase; ">${feed.title}</h1><br>`;
     }
     
 
@@ -39,9 +39,7 @@ function populateRSS(feedURL) {
 
       htmlString += '<div>';
 
-      htmlString += '<a href="' + entry.link + '">';
-
-      htmlString += '<h2>' + entry.title + '</h2></a>';
+      htmlString += '<a href="' + entry.link + '" style="font-size: 22px;">' +  entry.title + '</a>';
 
       if (entry.content) {
         htmlString += '<p>' + entry.content + '</p>';
