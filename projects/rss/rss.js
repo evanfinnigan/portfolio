@@ -3,7 +3,6 @@
 const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 const feeds = [
-  'https://www.google.com/alerts/feeds/07300950182940742473/4990875433300408370', 
   'https://www.google.com/alerts/feeds/07300950182940742473/4556981370076388249', 
   'https://www.google.com/alerts/feeds/07300950182940742473/3924068934042575424',
   'https://www.google.ca/alerts/feeds/07300950182940742473/7770587749561847465'

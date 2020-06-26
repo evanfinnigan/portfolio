@@ -79,7 +79,7 @@ List&lt;Slider&gt; binSliders = new List&lt;Slider&gt;();</code></pre>
 GameObject g = Instantiate(binPrefab, binHolder);
 Sliders = g.GetComponent&lt;Slider&gt;();
 
-if(b.CanFit(item))
+if (b.CanFit(item))
 {
   b.Add(item);
   s.value = 1f - b.capacity;
@@ -89,63 +89,60 @@ bins.Add(b);
 binSliders.Add(s);</code></pre>
       <p>Finally, I made it so that the slider would be updated each time a new item was added to the corresponding bin.</p>
       <pre><code>packed = bins[bins.Count - 1].Add(item);
-binSliders[bins.Count - 1].value = 
-          1f - bins[bins.Count - 1].capacity;</code></pre>
+binSliders[bins.Count - 1].value = 1f - bins[bins.Count - 1].capacity;</code></pre>
       <p>In the Unity editor, I created a drop down menu to select the algorithm, and hooked it up to test my simple animation system.</p>
       <figure><img src="../images/binpacking-tutorial-fig2.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 2: Animation using sliders</figcaption>
       </figure><br>
       <p>The animation doesn’t show the items within the bins as distinct, it just shows how full each bin is, so it lacks some detail about the situation. In addition to that, there is no way for the user to see or modify the input to the algorithm.</p>
       <p>I decided that I would create a new way of filling the bin with several distinct rectangles, whose height represents the size of the corresponding item. To do this, I made a new class called BinFillAnimation, which handled drawing rectangles within a bin. This class simply instantiates an object containing an image, and sets the position so that the images are stacked within the bin area, and sets the height corresponding to the size of the item.</p>
-      <pre><code>  public class BinFillAnimation: MonoBehaviour {
+      <pre><code>public class BinFillAnimation: MonoBehaviour {
   
   public GameObject fillPrefab;
-	public Transform fillArea;
-	
-	public void AddFill(float yPos, float height)
-	{    
-      GameObject fill = Instantiate(fillPrefab, fillArea);
-      RectTransform t = (RectTransform)fill.transform;
-      t.position += newVector3(0f, yPos, 0f);
-      t.sizeDelta = newVector2(t.sizeDelta.x, height);
-    }
-  }</code></pre>
+  public Transform fillArea;
+
+  public void AddFill(float yPos, float height)
+  {
+    GameObject fill = Instantiate(fillPrefab, fillArea);
+    RectTransform t = (RectTransform)fill.transform;
+    t.position += newVector3(0f, yPos, 0f);
+    t.sizeDelta = newVector2(t.sizeDelta.x, height);
+  }
+}</code></pre>
       <p>Within the BinPackingAnimation class, I replaced the sliders with BinFillAnimation objects.Note that the height and position of the fill objects are being multiplied by 100f to account for the fact that the bin area is 100 pixels tall. These modifications were made for all of the algorithms.</p>
-      <pre><code>  ...
-  
-  //List&lt;Slider&gt; binSliders = new List&lt;Slider&gt;();
-  List&lt;BinFillAnimation&gt; binFills = newList&lt;\BinFillAnimation&gt;();
-  
-  ...
-  
-  //binSliders[bins.Count - 1].value = 
-      1f - bins[bins.Count - 1].capacity;
-  if(packed) 
-  {
-      binFills[bins.Count - 1].AddFill(
-	        100f*((1f - oldCapacity) + item / 2), 100f*item);
-  }
-  
-  ...
-  
-  Bin b = new Bin();
-  
-  //GameObject g = Instantiate(binPrefab, binHolder);
-  //Slider s = g.GetComponent&lt;Slider&gt;();
-  
-  GameObject g = Instantiate(binFillPrefab, binHolder);
-  BinFillAnimations = g.GetComponent&lt;BinFillAnimation&gt;();
-  
-  if(b.CanFit(item))
-  {
-      b.Add(item);
-	    //s.value = 1f - b.capacity;
-	    s.AddFill(100f*(item / 2), 100f*item);
-  }
-  
-  bins.Add(b);
-  //binSliders.Add(s);
-  binFills.Add(s);			</code> </pre>
+      <pre><code>...
+
+//List&lt;Slider&gt; binSliders = new List&lt;Slider&gt;();
+List&lt;BinFillAnimation&gt; binFills = newList&lt;\BinFillAnimation&gt;();
+
+...
+
+//binSliders[bins.Count - 1].value = 1f - bins[bins.Count - 1].capacity;
+if (packed) 
+{
+  binFills[bins.Count - 1].AddFill(100f*((1f - oldCapacity) + item / 2), 100f*item);
+}
+
+...
+
+Bin b = new Bin();
+
+//GameObject g = Instantiate(binPrefab, binHolder);
+//Slider s = g.GetComponent&lt;Slider&gt;();
+
+GameObject g = Instantiate(binFillPrefab, binHolder);
+BinFillAnimations = g.GetComponent&lt;BinFillAnimation&gt;();
+
+if (b.CanFit(item))
+{
+  b.Add(item);
+  //s.value = 1f - b.capacity;
+  s.AddFill(100f*(item / 2), 100f*item);
+}
+
+bins.Add(b);
+//binSliders.Add(s);
+binFills.Add(s);			</code> </pre>
       <figure><img src="../images/binpacking-tutorial-fig3.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 3: Animating items in the bins as distinct entities</figcaption>
       </figure><br>
@@ -153,99 +150,96 @@ binSliders[bins.Count - 1].value =
       <pre><code>public GameObject inputItemPrefab;
 public Transform inputList;</code> </pre>
       <p>Like before, this is just a template for list items and a holder which will act as their parent. Rather than a grid layout, the inputList object has a vertical layout, and listItemPrefab is just a simple object with a text component. Once displaying the input values worked, I changed the listItemPrefab so it contained a button to remove that item from the list, and I added an input field and an add button to add a new item to the end of the input list. In BinPackingAnimation, I made two functions, ClearInputList and UpdateList which refresh the list when values are added and removed. UpdateList automatically adds the button logic for removing an item when those list items are added. ClearList just removes the instantiated list items.</p>
-      <pre><code>  private void ClearInputList() 
-  {  
-    while(inputList.childCount &gt; 0)
-	{
-      DestroyImmediate(inputList.GetChild(0).gameObject);
-	}
+      <pre><code>private void ClearInputList() 
+{  
+  while(inputList.childCount &gt; 0)
+  {
+    DestroyImmediate(inputList.GetChild(0).gameObject);
   }
-  
-  public void UpdateList()
+}
+
+public void UpdateList()
+{
+  ClearInputList();
+  for(int i = 0; i &lt; testValues.Count; i++)
   {
-    ClearInputList();
-	for(int i = 0; i &lt; testValues.Count; i++)
-    {
-      GameObject g = Instantiate(inputItemPrefab, inputList);
-      g.GetComponentInChildren&lt;Text&gt;().text = string.Format("{0}", testValues[i]);
-      int remIndex = i;
-      g.GetComponentInChildren&lt;Button&gt;().onClick.AddListener(
-        () =&gt; {
-                testValues.RemoveAt(remIndex);
-                UpdateList();
-        });
-    }
-  }</code> </pre>
+    GameObject g = Instantiate(inputItemPrefab, inputList);
+    g.GetComponentInChildren&lt;Text&gt;().text = string.Format("{0}", testValues[i]);
+    int remIndex = i;
+    g.GetComponentInChildren&lt;Button&gt;().onClick.AddListener(() =&gt; {
+      testValues.RemoveAt(remIndex);
+      UpdateList();
+    });
+  }
+}</code> </pre>
       <p>The logic for adding a new element to the list is contained in a separate script which is added as a component to the add button. It simply gets the value from the input field, makes sure that it’s within the proper range, adds it to the input set, and updates the list displayed to the user. The displayText element see below is just a UI text element that I added to the canvas for printing information. It is also used in the BinPackingAnimation class to let the user know which item is about to be packed in the bins.</p>
-      <pre><code>  public class AddButton : MonoBehaviour 
+      <pre><code>public class AddButton : MonoBehaviour 
+{
+  public InputField input;
+  public BinPackingAnimation binPackingAnimation;
+  public Text displayText;
+
+  public void Add()
   {
-    public InputField input;
-    public BinPackingAnimation binPackingAnimation;
-    public Text displayText;
-	
-    public void Add()
-	{
-      float newValue = float.Parse(input.text);
-      if(newValue &gt; 0f && newValue &lt;= 1f) 
-	  {
-	    binPackingAnimation.testValues.Add(newValue);
-        binPackingAnimation.UpdateList();
-      }
-      else
-      {
-        displayText.text = "Please enter a value in the range 0 &lt; value &lt;=1";
-      }
+    float newValue = float.Parse(input.text);
+    if (newValue &gt; 0f &amp;&amp; newValue &lt;= 1f) 
+    {
+      binPackingAnimation.testValues.Add(newValue);
+      binPackingAnimation.UpdateList();
     }
-  }</code> </pre>
+    else
+    {
+      displayText.text = "Please enter a value in the range 0 &lt; value &lt;=1";
+    }
+  }
+}</code> </pre>
       <figure><img src="../images/binpacking-tutorial-fig4.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 4: Adding the input display & ability to modify the input set</figcaption>
       </figure><br>
       <p>At this point, the core functionality of the animation system was in place, but there were a few extra modifications I wanted to make. For one thing, I wanted to add colour to make it easier to recognize whether the chosen algorithm was using the space in the bins efficiently. In BinPackingAnimation, I created two Color fields indicating efficient and inefficient use of space, so that the colour of the items could indicate how full a bin is.</p>
       <p>I modified BinFillAnimation so that it keeps track of the images representing the items in the bin, and added a Color input to AddFill so that the image colours could be updated as more are added to the bin.</p>
-      <pre><code>  private List&lt;Image&gt; images;
-  public void Awake()
+      <pre><code>private List&lt;Image&gt; images;
+public void Awake()
+{
+  images = new List&lt;Image&gt;();
+}  
+
+public void AddFill(Color c,float yPos, float height)
+{
+  GameObject fill = Instantiate(fillPrefab, fillArea);
+  RectTransform t = (RectTransform)fill.transform;
+  t.position += newVector3(0f, yPos, 0f);
+  t.sizeDelta = newVector2(t.sizeDelta.x, height);
+  Image img = fill.GetComponent&lt;Image&gt;();
+  images.Add(img);
+
+  // update colors for bin
+  foreach (var im in images)
   {
-    images = new List&lt;Image&gt;();
-  }  
-  
-  public void AddFill(Color c,float yPos, float height)
-  {
-    GameObject fill = Instantiate(fillPrefab, fillArea);
-    RectTransform t = (RectTransform)fill.transform;
-    t.position += newVector3(0f, yPos, 0f);
-    t.sizeDelta = newVector2(t.sizeDelta.x, height);
-	Image img = fill.GetComponent&lt;Image&gt;();
-	images.Add(img);
-	
-    // update colors for bin
-    foreach(var im in images)
-    {
-      if(im != null)
-        im.color = c;
+    if (im != null) {
+      im.color = c;
     }
-  }</code> </pre>
+  }
+}</code> </pre>
       <p>Then, in BinPackingAnimation, I modified calls to AddFill so that it would linearly interpolate between the two Color attributes based on the capacity of the bin, and pass the interpolated Color into AddFill.</p>
       <pre><code>s.AddFill(Color.Lerp(colorA, colorB, b.capacity),100f*(item / 2), 100f*item);</code> </pre>
       <figure><img src="../images/binpacking-tutorial-fig5.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 5: Colour representing efficient use of space</figcaption>
       </figure><br>
       <p>There’s still a problem with this system. In order to replay the animation once it has finished, the user needs to select a different algorithm (or ‘None’) from the dropdown field, and then re-select the algorithm to play. There’s also a bug, where switching algorithms while an animation is running will result in both running at the same time, since co-routines operate asynchronously. To solve these problems, I first modified BinPackingAlgorithm so that it keeps track of the running co-routine and stops it before starting a new co-routine. Then, I added a button which has a reference to the dropdown field and runs the animation based on the value of the dropdown.</p>
-      <pre><code>Coroutine runningCo;
-...
-public void NextFitAnimation()
+      <pre><code>public void NextFitAnimation()
 {
   if(runningCo != null)
   {
     StopCoroutine(runningCo);
-  }</code> </pre>
+  }
+...
+}</code> </pre>
       <figure><img src="../images/binpacking-tutorial-fig6.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 6: Animation System</figcaption>
       </figure><br>
       <p>At this point, the animation system was almost complete. I wanted the user to be able to switch between the algorithm and it’s decreasing variation, which each of the algorithms I had implemented has. To do this, I added a toggle button which determines whether or not the algorithm will sort the input decreasingly by size prior to placing the items in bins.</p>
-      <pre><code>...
-public Toggle sortDecreasingToggle;
-...
-public IEnumerator NextFitCo()
+      <pre><code>public IEnumerator NextFitCo()
 {
   List&lt;float&gt; values = new List&lt;float&gt;(testValues);
   
@@ -255,10 +249,7 @@ public IEnumerator NextFitCo()
     values.Reverse();
   }
 ...
-
-foreach (float item in values)
-{
-  ...</code> </pre>
+}</code> </pre>
       <figure><img src="../images/binpacking-tutorial-fig7.jpg" alt="Screenshot of the Bin Packing program.">
         <figcaption>Fig. 7: Sort toggle & added functionality</figcaption>
       </figure><br>
