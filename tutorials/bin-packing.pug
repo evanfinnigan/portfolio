@@ -59,7 +59,7 @@ html(lang='en')
             GameObject g = Instantiate(binPrefab, binHolder);
             Sliders = g.GetComponent&lt;Slider&gt;();
             
-            if(b.CanFit(item))
+            if (b.CanFit(item))
             {
               b.Add(item);
               s.value = 1f - b.capacity;
@@ -73,8 +73,7 @@ html(lang='en')
       pre
         code.
             packed = bins[bins.Count - 1].Add(item);
-            binSliders[bins.Count - 1].value = 
-                      1f - bins[bins.Count - 1].capacity;
+            binSliders[bins.Count - 1].value = 1f - bins[bins.Count - 1].capacity;
         |
 			
       p In the Unity editor, I created a drop down menu to select the algorithm, and hooked it up to test my simple animation system.
@@ -86,19 +85,19 @@ html(lang='en')
       p I decided that I would create a new way of filling the bin with several distinct rectangles, whose height represents the size of the corresponding item. To do this, I made a new class called BinFillAnimation, which handled drawing rectangles within a bin. This class simply instantiates an object containing an image, and sets the position so that the images are stacked within the bin area, and sets the height corresponding to the size of the item.
       pre
         code.
-            public class BinFillAnimation: MonoBehaviour {
+          public class BinFillAnimation: MonoBehaviour {
             
             public GameObject fillPrefab;
-          	public Transform fillArea;
-          	
-          	public void AddFill(float yPos, float height)
-          	{    
-                GameObject fill = Instantiate(fillPrefab, fillArea);
-                RectTransform t = (RectTransform)fill.transform;
-                t.position += newVector3(0f, yPos, 0f);
-                t.sizeDelta = newVector2(t.sizeDelta.x, height);
-              }
+            public Transform fillArea;
+          
+            public void AddFill(float yPos, float height)
+            {
+              GameObject fill = Instantiate(fillPrefab, fillArea);
+              RectTransform t = (RectTransform)fill.transform;
+              t.position += newVector3(0f, yPos, 0f);
+              t.sizeDelta = newVector2(t.sizeDelta.x, height);
             }
+          }
         |
 			
       p Within the BinPackingAnimation class, I replaced the sliders with BinFillAnimation objects.Note that the height and position of the fill objects are being multiplied by 100f to account for the fact that the bin area is 100 pixels tall. These modifications were made for all of the algorithms.
@@ -111,12 +110,10 @@ html(lang='en')
             
             ...
             
-            //binSliders[bins.Count - 1].value = 
-                1f - bins[bins.Count - 1].capacity;
-            if(packed) 
+            //binSliders[bins.Count - 1].value = 1f - bins[bins.Count - 1].capacity;
+            if (packed) 
             {
-                binFills[bins.Count - 1].AddFill(
-          	        100f*((1f - oldCapacity) + item / 2), 100f*item);
+              binFills[bins.Count - 1].AddFill(100f*((1f - oldCapacity) + item / 2), 100f*item);
             }
             
             ...
@@ -129,11 +126,11 @@ html(lang='en')
             GameObject g = Instantiate(binFillPrefab, binHolder);
             BinFillAnimations = g.GetComponent&lt;BinFillAnimation&gt;();
             
-            if(b.CanFit(item))
+            if (b.CanFit(item))
             {
-                b.Add(item);
-          	    //s.value = 1f - b.capacity;
-          	    s.AddFill(100f*(item / 2), 100f*item);
+              b.Add(item);
+              //s.value = 1f - b.capacity;
+              s.AddFill(100f*(item / 2), 100f*item);
             }
             
             bins.Add(b);
@@ -159,24 +156,23 @@ html(lang='en')
             private void ClearInputList() 
             {  
               while(inputList.childCount &gt; 0)
-          	{
+              {
                 DestroyImmediate(inputList.GetChild(0).gameObject);
-          	}
+              }
             }
             
             public void UpdateList()
             {
               ClearInputList();
-          	for(int i = 0; i &lt; testValues.Count; i++)
+              for(int i = 0; i &lt; testValues.Count; i++)
               {
                 GameObject g = Instantiate(inputItemPrefab, inputList);
                 g.GetComponentInChildren&lt;Text&gt;().text = string.Format("{0}", testValues[i]);
                 int remIndex = i;
-                g.GetComponentInChildren&lt;Button&gt;().onClick.AddListener(
-                  () =&gt; {
-                          testValues.RemoveAt(remIndex);
-                          UpdateList();
-                  });
+                g.GetComponentInChildren&lt;Button&gt;().onClick.AddListener(() =&gt; {
+                  testValues.RemoveAt(remIndex);
+                  UpdateList();
+                });
               }
             }
         | 
@@ -189,13 +185,13 @@ html(lang='en')
               public InputField input;
               public BinPackingAnimation binPackingAnimation;
               public Text displayText;
-          	
+          
               public void Add()
-          	{
+              {
                 float newValue = float.Parse(input.text);
-                if(newValue &gt; 0f && newValue &lt;= 1f) 
-          	  {
-          	    binPackingAnimation.testValues.Add(newValue);
+                if (newValue &gt; 0f &amp;&amp; newValue &lt;= 1f) 
+                {
+                  binPackingAnimation.testValues.Add(newValue);
                   binPackingAnimation.UpdateList();
                 }
                 else
@@ -226,14 +222,15 @@ html(lang='en')
               RectTransform t = (RectTransform)fill.transform;
               t.position += newVector3(0f, yPos, 0f);
               t.sizeDelta = newVector2(t.sizeDelta.x, height);
-          	Image img = fill.GetComponent&lt;Image&gt;();
-          	images.Add(img);
-          	
+              Image img = fill.GetComponent&lt;Image&gt;();
+              images.Add(img);
+          
               // update colors for bin
-              foreach(var im in images)
+              foreach (var im in images)
               {
-                if(im != null)
+                if (im != null) {
                   im.color = c;
+                }
               }
             }
         | 
@@ -251,14 +248,14 @@ html(lang='en')
       p There’s still a problem with this system. In order to replay the animation once it has finished, the user needs to select a different algorithm (or ‘None’) from the dropdown field, and then re-select the algorithm to play. There’s also a bug, where switching algorithms while an animation is running will result in both running at the same time, since co-routines operate asynchronously. To solve these problems, I first modified BinPackingAlgorithm so that it keeps track of the running co-routine and stops it before starting a new co-routine. Then, I added a button which has a reference to the dropdown field and runs the animation based on the value of the dropdown.
       pre
         code.
-            Coroutine runningCo;
-            ...
             public void NextFitAnimation()
             {
               if(runningCo != null)
               {
                 StopCoroutine(runningCo);
               }
+            ...
+            }
         | 
 			
       figure
@@ -268,9 +265,6 @@ html(lang='en')
       p At this point, the animation system was almost complete. I wanted the user to be able to switch between the algorithm and it’s decreasing variation, which each of the algorithms I had implemented has. To do this, I added a toggle button which determines whether or not the algorithm will sort the input decreasingly by size prior to placing the items in bins.
       pre
         code.
-            ...
-            public Toggle sortDecreasingToggle;
-            ...
             public IEnumerator NextFitCo()
             {
               List&lt;float&gt; values = new List&lt;float&gt;(testValues);
@@ -281,10 +275,7 @@ html(lang='en')
                 values.Reverse();
               }
             ...
-            
-            foreach (float item in values)
-            {
-              ...
+            }
         | 
 			
       figure
