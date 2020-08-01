@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"/>
+    <!--  Nav bar based on w3schools tutorials -->
+    <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+    <!--  https://www.w3schools.com/css/css_navbar.asp -->
+    <script>
+      function navDropDown() {
+        var x = document.getElementById("topnav");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+      
+      function toggleCollapsed(id, btnId) {
+        var btn = document.getElementById(btnId);
+        var content = document.getElementById(id);
+        if (content != null) {
+          if (content.getAttribute("class") == "notcollapsed") {
+            content.setAttribute("class", "collapsed");
+            if (btn != null) {
+              btn.innerText = "+";
+            }
+          } else {
+            content.setAttribute("class", "notcollapsed");
+            if (btn != null) {
+              btn.innerText = "-";
+            }
+          }
+        }
+      }
+    </script>
+    <meta name="description" content="Evan Finnigan's Résumé">
+    <title>Evan Finnigan - Résumé</title>
+  </head>
+  <body>
+    <header>
+      <!--  Nav bar based on w3schools tutorials -->
+      <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+      <!--  https://www.w3schools.com/css/css_navbar.asp -->
+      <nav>
+        <div class="nav" id="topnav"><a class="active" href="../index.html">Evan Finnigan</a><a href="../projects/index.html">Projects</a><a href="../tutorials/index.html">Tutorials</a><a href="../blog/index.html">Blog</a><a href="../contact/index.html">Contact</a><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a></div>
+      </nav>
+    </header>
+    <main class="content">
+      <div class="resume card">
+        <h2>Education</h2>
+        <hr>
+        <h3>The University of Western Ontario</h3>
+        <h4 class="education">Bachelor of Science, 4 Year Program</h4>
+        <ul class="no-bullet">
+          <li>Specialization in Computer Science (<a href="http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg657.html">module</a>)</li>
+          <li>Minor in Game Development (<a href="http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg663.html">module</a>)</li>
+        </ul>
+        <h4 class="education">Honors and Awards</h4>
+        <ul class="no-bullet">
+          <li>The Western Scholarship of Excellence <span class="date-right">2013</span></li>
+          <li>Dean's Honor List <span class="date-right">2015/2016</span></li>
+          <li>Dean's Honor List <span class="date-right">2017/2018</span></li>
+        </ul>
+        <hr>
+        <h3>Certifications</h3>
+        <div style="overflow-x:auto;">
+          <table>
+            <tbody>
+              <tr>
+                <td>Nonviolent Crisis Intervention</td>
+                <td class="hide-column"><a href="https://www.crisisprevention.com/">Crisis Prevention Institute</a></td>
+                <td class="hide-column text-right">15/06/2019</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.acctinfo.org/">ACCT</a> Level 1 - Full</td>
+                <td class="hide-column"><a href="http://adventureworks.org/">Adventureworks! Assoc. Inc.</a></td>
+                <td class="hide-column text-right">26/05/2019</td>
+              </tr>
+              <tr>
+                <td>Mental Health First Aid Training</td>
+                <td class="hide-column"><a href="https://www.mhfa.ca/">Mental Health First Aid Canada</a></td>
+                <td class="hide-column text-right">31/03/2019</td>
+              </tr>
+              <tr>
+                <td><a href="/documents/first_aid_cert.pdf">Standard First Aid & CPR C</a></td>
+                <td class="hide-column"><a href="https://www.redcross.ca/">Canadian Red Cross</a></td>
+                <td class="hide-column text-right">15/06/2018</td>
+              </tr>
+              <tr>
+                <td>Ontario Driver's licence, Class G</td>
+                <td class="hide-column"><a href="https://www.ontario.ca/page/drivers-licence">Service Ontario</a></td>
+                <td class="hide-column text-right">14/01/2016</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="resume card">
+        <h2>Work Experience</h2>
+        <hr>
+        <div>
+          <h3 id="big-blue-bubble">Game Programming Intern - <a href="https://www.bigbluebubble.com/">Big Blue Bubble</a> (2016 / 2017)</h3>
+          <p>At Big Blue Bubble I developed mobile games and experienced the full process of software development from concept to release. I wrote code in Java, C++, C#, and Objective-C. I worked with Visual Studio, SVN, Unity, Jira, Bamboo, and Confluence.</p>
+          <div>
+            <p>During my internship I contributed to the following mobile games and applications:</p>
+            <ul>
+              <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/">My Singing Monsters</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/">My Singing Monsters: Official Guide</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/home-arcade/">Home Arcade</a></li>
+              <li><a href="https://www.bigbluebubble.com/home/games/concert-kings/">Concert Kings</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div>
+          <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a> (2018 / 2019)</h3>
+          <p>At RP4k I taught math & programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. </p>
+          <p>At RP4K, I taught the following courses:</p>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - teaching the fundamentals of programming by making a Pac-Man re-skin using Visual Basic</li>
+            <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - teaching Object-Oriented Programming by recreating the classic arcade game in Java</li>
+            <li><a href="https://www.youtube.com/watch?v=G_E4z0kGrsE">Sharp Shooter</a> - teaching Vector math and testing students programming skills by making a top-down shooter in C#</li>
+          </ul>
+        </div>
+        <hr>
+        <h3>Resource Team - Canterbury Hills Camp (Summer 2019)</h3>
+        <p>As a member of the Resource Team, my job was to be an all-encompassing resource for all staff and campers. As this was both an overnight camp and a day camp, this role was very involved, as I worked and lived at the camp for the entirety of each week.</p>
+        <ul>
+          <li>Interviewed candidates and participated in staff hiring decisions</li>
+          <li>Designed and lead training for all staff, as well as additional training throughout the summer for LITs</li>
+          <li>Oversaw the day-to-day operations of the camp</li>
+          <li>Gave first aid treatment to staff and campers in the wellness centre</li>
+          <li>Completed necessary documentation such as staff performance evaluations and medical distribution records</li>
+          <li>Fulfilled roles as a certified Assistant Ropes Course Instructor (ACCT Level 1) including setting up & taking down belay systems and general ropes course supervision</li>
+        </ul>
+        <hr>
+        <h3>Website Design & Development - <a href="http://www.sosgreatlakes.org/">SOS Great Lakes (November 2019 - Present)</a></h3>
+        <p>I am currently managing the website for SOS Great Lakes on a part-time contract basis. I've primarily worked on accessibility features, content updates.</p>
+        <hr>
+        <p>Landscaping Technician - Cassel Care Lawn Services (Summer 2014, Summer 2015)</p>
+        <p>Overnight Cabin Leader - Canterbury Hills Camp (Summer 2010 - Summer 2012, Summer 2018)</p>
+        <p>Cashier - Canadian Tire (Spring & Summer 2013)</p>
+      </div>
+      <div class="resume card">
+        <h2>School Projects</h2>
+        <hr>
+        <h3> <a href="projects/stack-attack.html">Stack Attack </a>(CS 4480: Game Development Project - UWO) </h3>
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        </div>
+        <p><i>Stack Attack</i> is a local-multiplayer platform fighting game, in which players can choose to form & break alliances on the fly. Players stack on top of each other to gain stronger abilities against the remaining opponents, and the last stack standing wins. </p>
+        <p>This was a group project built for the Game Development Project course at UWO.</p>
+        <p>Some cool features of this project include:</p>
+        <ul>
+          <li>Local multiplayer</li>
+          <li>Player vs. AI gameplay</li>
+          <li>Unique alliance mechanics</li>
+          <li>Different abilities: melee combat and two types of projectile combat</li>
+        </ul>
+        <hr>
+        <h3> <a href="projects/vikings.html">Sjøkrigere </a> (CS 4483: Game Design - UWO) </h3>
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        </div>
+        <p><i>Sjøkrigere</i> is a retro-style game in which the player explores the seas in a viking ship, battles sea monsters, and pillages towns for supplies and crew.</p>
+        <p>I created the game design for this project on my own, but the implementation was done as a group project.</p>
+        <p>Check out the project on <a href="https://github.com/evanfinnigan/cs4483_project">Github</a></p>
+        <hr>
+        <h3>Lil' Math Chef (CS 4474: Human Computer Interaction - UWO)</h3>
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        </div>
+        <p>An educational math program for learning fractions. The focus of the project was on usability and following principles of design. The program has three main components: a practice mode and two mini-games.</p>
+        <p>This was a group project.</p>
+        <p>Check out the project on <a href="https://github.com/evanfinnigan/HCI_cs4474">Github</a></p>
+        <hr>
+        <h3> <a href="projects/graph-algorithms.html"> </a> Graph Algorithms (CS 3346: Artificial Intelligence I - UWO)</h3>
+        <div class="tags"><span class="tag" style="color: #ffdb50; background-color: #3b77a7;">Python</span> 
+        </div>
+        <p>Implemented the following algorithms:</p>
+        <ul>
+          <li>Depth First Search</li>
+          <li>Breadth First Search</li>
+          <li>Uniform Cost Search</li>
+          <li>A* Search</li>
+          <li>Minimax</li>
+        </ul>
+        <p>These algorithms were applied to a Pacman game environment. The projects originate from <a href="http://ai.berkeley.edu/project_overview.html">Berkeley CS188</a>.</p>
+        <hr>
+        <h3> <a href="projects/ray-tracer.html">Ray Tracing Program </a> (CS 3388: Computer Graphics I - UWO)</h3>
+        <div class="tags"><span class="tag" style="color: #ffffff; background-color: #575757;">C</span> 
+        </div>
+        <p>A project implementing a ray-traced graphics engine, capable of rendering 3D geometry in a scene with lighting, reflections, and refractions.</p>
+        <ul>
+          <li>Ray intersection of 3D Geomerty: spheres, cubes, cylinders, and planes, as well as transformations of these shapes</li>
+          <li>Implemented reflections and refractions for different types of material</li>
+          <li>Implemented Phong reflection model lighting techniques:
+            <ul>
+              <li>Ambient Shading</li>
+              <li>Diffuse Reflection</li>
+              <li>Specular Reflection</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+        <h3> <a href="projects/weather.html">Weather Application </a> (Introduction to Software Engineering - UWO)</h3>
+        <div class="tags"><span class="tag" style="color: #df2c27; background-color: #ffffff;">Java</span> 
+        </div>
+        <p>This project was a simple desktop weather application.</p>
+        <p>This group project was the first project (other than some small console programs) that we created without any starter code from instructors. It was my first time using an external API, dealing with JSON data, building a UI in Java, using a build system (maven), and my first group project making software.</p>
+        <p>Check out the project on <a href="https://github.com/evanfinnigan/team7">Github</a></p>
+      </div>
+      <div class="resume card">
+        <h2>Various Other Projects</h2>
+        <hr>
+        <h3>Leasily</h3>
+        <div class="tags"><span class="tag" style="color: #46483d; background-color: #90c53f;">Node.js</span> <span class="tag">Express</span> <span class="tag" style="color: #464547; background-color: #ffffff;">mongoDB</span> <span class="tag" style="color: #ffffff; background-color: #a86454;">Pug</span> <span class="tag">Bootstrap</span> 
+        </div>
+        <p>A web application (in development).</p>
+        <ul>
+          <li>Authentication system using BCrypt</li>
+          <li>MongoDB database for user information</li>
+          <li>Bootstrap</li>
+          <li>Pug view engine</li>
+        </ul>
+        <hr>
+        <h3> <a href="projects/monster-lazer.html">Monster Lazer</a></h3>
+        <div class="tags"><span class="tag" style="color: #363536; background-color: #fbd601;">JavaScript</span> <span class="tag" style="color: #ffffff; background-color: #f16524;">HTML</span> 
+        </div>
+        <p>A game I made at a hackathon to learn JavaScript</p>
+        <hr><a href="projects/index.html">Other Projects</a>
+      </div>
+      <div class="clear"></div>
+    </main>
+    <footer>
+      <div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://github.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/github.png" alt="github icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              GitHub
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://twitter.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/twitter.png" alt="twitter icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Twitter
+                    </span></a></div>
+        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><span class="left"><img src="https://evanfinnigan.com/images/icons/instagram.png" alt="instagram icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
+              Instagram
+                    </span></a></div><br><br><br>
+        <div class="clear" style="margin-left: -85px;">
+          <address></address>Ⓒ <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2020</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
