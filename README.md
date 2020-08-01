@@ -1,8 +1,12 @@
 # Portfolio
 
-## My Professional Portfolio [Website](https://pugjs.org/api/getting-started.html)
+## My Professional Portfolio [Website](https://www.evanfinnigan.com)
 
-I'm currently looking for job opportunities as a software developer. Hire me!
+A professional portfolio website.
+
+[evanfinnigan.com](https://www.evanfinnigan.com)
+
+Github Pages version - [evanfinnigan.github.io/portfolio](https://evanfinnigan.github.io/portfolio)
 
 ## Master Branch
 
