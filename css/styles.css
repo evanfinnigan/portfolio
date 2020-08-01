@@ -428,8 +428,8 @@ ul {
     padding: 30px 50px;
   }
   .display-case {
-    margin-left: -5%;
-    width: 110%;
+    /* margin-left: -5%;
+    width: 110%; */
   }
 }
 @media only screen and (max-width: 1250px) and (min-width: 501px) {
