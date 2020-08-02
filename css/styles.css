@@ -20,18 +20,17 @@ h6 {
 .profilepic img {
   border-radius: 200px;
 }
-/* .sidebar img{
-  filter: hue-rotate(0deg) saturate(10%) contrast(80%) drop-shadow(0px 0px 0px black);
-  transition-duration: 2s;
-} */
-/* .sidebar img:hover {
-  filter: hue-rotate(270deg) saturate(150%) contrast(100%) drop-shadow(16px 16px 20px black);
-  transition-duration: 2s;
-} */
+.content {
+  max-width: 900px;
+  margin: auto;
+}
 .education {
   font-weight: 400;
   margin-left: 20px;
   margin-top: 30px;
+}
+.contact div {
+  margin-bottom: 10px;
 }
 h1 {
   padding: 20px 10px 10px 10px;
@@ -184,7 +183,7 @@ figcaption {
   font-style: italic;
 }
 code {
-  padding: 1em;
+  padding: 10px;
   display: block;
   box-sizing: border-box;
   background: #171E21;
@@ -283,15 +282,15 @@ table {
   font-size: 0.8em;
 }
 .resume .tag {
-  font-size: 1em;
+  font-size: 10px;
 }
-.intro img {
+/* .intro img {
   object-fit: cover;
   height: 12em;
   width: 100%;
   padding: 0px;
   margin: 0px;
-}
+} */
 .social img {
   border-style: none;
 }
@@ -304,7 +303,7 @@ table {
 }
 .long-preview {
   box-sizing: border-box;
-  height: 5em;
+  /* height: 5em; */
   width: 100%;
   border-style: solid;
   border-width: 1px;
@@ -312,8 +311,8 @@ table {
   border-radius: 10px;
   background: #171E21;
   display: block;
-  padding: 1em;
-  margin: 1em auto;
+  padding: 10px;
+  margin: 10px auto;
   overflow: hidden;
 }
 .long-preview a {
@@ -339,8 +338,7 @@ table {
   border-radius: 30px;
   background: #171E21;
   width: 33%;
-  min-width: 15em;
-  max-width: 20em;
+  max-width: 400px;
   height: auto;
   padding: 10px;
   margin: 0px;
@@ -360,18 +358,21 @@ table {
   text-decoration: underline;
 }
 .short-preview img {
-  margin-top: 1em;
-  width: 80%;
+  margin: 10px;
+  margin-bottom: 0;
+  width: calc(100% - 20px);
   height: 7em;
   object-fit: cover;
 }
 .short-preview p {
-  height: 6em;
-  width: 80%;
+  padding: 10px;
+  margin: 0;
+  margin-top: 10px;
 }
 .tags {
   min-height: 2em;
   line-height: 2em;
+  padding: 10px;
 }
 @media only screen and (min-width: 1250px) {
   .short-preview {
@@ -406,7 +407,7 @@ table {
 }
 ol,
 ul {
-  margin-bottom: 1em;
+  margin-bottom: 10px;
 }
 @media only screen and (min-width: 1250px) {
   main {
@@ -426,10 +427,6 @@ ul {
   .card,
   .blogpost {
     padding: 30px 50px;
-  }
-  .display-case {
-    /* margin-left: -5%;
-    width: 110%; */
   }
 }
 @media only screen and (max-width: 1250px) and (min-width: 501px) {
