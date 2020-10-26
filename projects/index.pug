@@ -11,10 +11,6 @@ html(lang='en')
       +nav('..')
     main.content
       h1 Projects
-
-      p These are some of the projects and games I have created. The links below provide more details about each project.
-      br
-      br
       
       .display-case
         .short-preview
@@ -25,14 +21,7 @@ html(lang='en')
           +tags('Unity','C#', 'UWO')
           
         .short-preview
-          a(href='bin-packing.html') Bin Packing
-          a.nofocus(href='bin-packing.html')
-            img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin Packing project.')
-          p A visualization of the Bin Packing algorithm
-          +tags('Unity','C#', 'UWO')
-          
-        .short-preview
-          a(href='website.html') Portfolio
+          a(href='website.html') Portfolio Website
           a.nofocus(href='website.html')
             img(src='../images/thumbnails/website.png' alt='Thumbnail for website.')
           p My professional web portfolio
@@ -58,6 +47,13 @@ html(lang='en')
             img(src='../images/pacman_game.gif' alt='Thumbnail for graph algorithms.')
           p An introductory AI project
           +tags('Python', 'AI', 'UWO')
+
+        .short-preview
+          a(href='bin-packing.html') Bin Packing
+          a.nofocus(href='bin-packing.html')
+            img(src='../images/binpacking-thumbnail.jpg' alt='Thumbnail for Bin Packing project.')
+          p A visualization of the Bin Packing algorithm
+          +tags('Unity','C#', 'UWO')
 
         .short-preview
           a(href='ray-tracer.html') Ray Tracer

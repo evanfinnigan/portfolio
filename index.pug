@@ -10,64 +10,73 @@ html(lang='en')
     header
       +nav('.')
 
-    main.content(style="max-width: 600px; margin: auto;")
+    main.content
 
-      h1 Evan Finnigan
-      
-      .profilepic
-        img(src='images/profile.jpg' alt='profile pic' height='128' width='128')
+      .sidebar
+        h1 Evan Finnigan
+        
+        .profilepic
+          img(src='images/profile.jpg' alt='profile pic' height='128' width='128')
 
-      br
-      br
+        br
+        br
 
-      div
-        | Hi, I'm Evan! I make software.
-        br
-        br
-        div(style="margin: auto;")
-          .clear
-            a.nofocus(href='https://github.com/evanfinnigan')
-              span.left
-                img(src='https://evanfinnigan.com/images/icons/github.png' alt='github icon' height='20' width='20')
-              span.left(style='padding-left: 1em;').
-                GitHub
-          .clear
-            a.nofocus(href='https://twitter.com/evanfinnigan')
-              span.left
-                img(src='https://evanfinnigan.com/images/icons/twitter.png' alt='twitter icon' height='20' width='20')
-              span.left(style='padding-left: 1em;').
-                Twitter
-          .clear
-            a.nofocus(href='https://www.instagram.com/evanfinnigan/')
-              span.left
-                img(src='https://evanfinnigan.com/images/icons/instagram.png' alt='instagram icon' height='20' width='20')
-              span.left(style='padding-left: 1em;').
-                Instagram
-        br
-        br
         div
-          h2 Projects
-          ul
-            li
-              a(href='/projects/game-engines.html') Aerial Firefighting
-            li
-              a(href='/projects/bin-packing.html') Bin Packing
-            li
-              a(href='/projects/website.html') Portfolio Website
-            li
-              a(href='/projects/stack-attack.html') Stack Attack
-            li
-              a(href='/projects/vikings.html') Sjøkrigere
-            li
-              a(href='/projects/graph-algorithms.html') Graph Algorithms
-            li
-              a(href='/projects/ray-tracer.html') Ray Tracer
-            li
-              a(href='/projects/monster-lazer.html') Monster Lazer
-    
-      br
-      br
+          | Hi, I'm Evan! I make software.
+          br
+          br
+          div(style="margin: auto;")
+            .clear
+              a.nofocus(href='https://github.com/evanfinnigan')
+                span.left
+                  img(src='https://evanfinnigan.com/images/icons/github.png' alt='github icon' height='20' width='20')
+                span.left(style='padding-left: 1em;').
+                  GitHub
+            .clear
+              a.nofocus(href='https://twitter.com/evanfinnigan')
+                span.left
+                  img(src='https://evanfinnigan.com/images/icons/twitter.png' alt='twitter icon' height='20' width='20')
+                span.left(style='padding-left: 1em;').
+                  Twitter
+            .clear
+              a.nofocus(href='https://www.instagram.com/evanfinnigan/')
+                span.left
+                  img(src='https://evanfinnigan.com/images/icons/instagram.png' alt='instagram icon' height='20' width='20')
+                span.left(style='padding-left: 1em;').
+                  Instagram
+          br
+          br
+          h3 Support My Projects
+        
+          div(style='display:"inline-block";')
+            a(href='https://ko-fi.com/T6T62013E' target='_blank')
+              img(height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com')
 
-      .clear
+          br
+          br
+
+      .non-sidebar
+        h2 Featured Projects
+        .medium-preview
+          a(href='leasily.herokuapp.com') Leasily
+          a.nofocus(href='leasily.herokuapp.com')
+            img(src='../images/leasily.png' alt='Thumbnail for Leasily.')
+          p A property management platform for Independent Landlords
+          +tags('Node.js', 'Express', 'mongoDB', 'Pug', 'Bootstrap')
+        .medium-preview
+          a(href='https://evanfinnigan.github.io/current-media/') Current Media
+          a.nofocus(href='https://evanfinnigan.github.io/current-media/')
+            img(src='../images/current.png' alt='Thumbnail for Current Media.')
+          p A collection of artists, producers, writers, photographers, and other media talent
+          +tags('Node.js', 'Express', 'PostgreSQL', 'Pug', 'HTML', 'CSS')
+
+        .card 
+          p View 
+            a(href='./resume') My Resume
+
+    br
+    br
+
+    .clear
 
     include ./common/footer.pug
