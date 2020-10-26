@@ -21,7 +21,7 @@ h6 {
   border-radius: 200px;
 }
 .content {
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: auto;
 }
 .education {
@@ -132,13 +132,16 @@ a img:hover {
   clear: both;
 }
 .sidebar {
-  min-width: 320px;
-  float: left;
+  display: inline-block;
+  max-width: 320px;
+  width: 100%;
   text-align: left;
+  vertical-align: top;
 }
 .non-sidebar {
+  display: inline-block;
   max-width: 825px;
-  float: left;
+  width: 100%;
 }
 footer div div {
   text-align: left;
@@ -329,22 +332,28 @@ table {
   width: 100%;
   padding: 0;
 }
-.short-preview {
+.short-preview, .medium-preview {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   border-color: #263238;
   border-width: 10px;
   border-style: solid;
   border-radius: 30px;
   background: #171E21;
-  width: 33%;
   max-width: 400px;
   height: auto;
   padding: 10px;
   margin: 0px;
   overflow: hidden;
 }
-.short-preview a {
+.short-preview {
+  width: 33%;
+}
+.medium-preview {
+  width: 50%;
+}
+.short-preview a, .medium-preview a {
   display: block;
   padding: 0;
   margin: auto;
@@ -354,17 +363,17 @@ table {
   font-size: 20px;
   overflow: hidden;
 }
-.short-preview a:hover {
+.short-preview a:hover, .medium-preview a:hover {
   text-decoration: underline;
 }
-.short-preview img {
+.short-preview img, .medium-preview img {
   margin: 10px;
   margin-bottom: 0;
   width: calc(100% - 20px);
   height: 7em;
   object-fit: cover;
 }
-.short-preview p {
+.short-preview p, .medium-preview p {
   padding: 10px;
   margin: 0;
   margin-top: 10px;
@@ -378,10 +387,17 @@ table {
   .short-preview {
     width: 33%;
   }
+  .medium-preview {
+    width: 50%;
+  }
+
 }
 @media only screen and (max-width: 1250px) {
   .short-preview {
     width: 50%;
+  }
+  .medium-preview {
+    width: 100%;
   }
   .sidebar {
     display: block;
@@ -391,11 +407,16 @@ table {
     float: none;
   }
   .non-sidebar {
+    display: block;
+    margin: auto;
     float: none;
   }
 }
 @media only screen and (max-width: 920px) {
   .short-preview {
+    width: 100%;
+  }
+  .medium-preview {
     width: 100%;
   }
 }
