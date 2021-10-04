@@ -42,26 +42,23 @@
   </head>
   <body>
     <header>
-      <!--  Nav bar based on w3schools tutorials -->
-      <!--  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-      <!--  https://www.w3schools.com/css/css_navbar.asp -->
       <nav>
-        <div class="nav" id="topnav"><a class="active" href="../index.html">Evan Finnigan</a><a href="../projects/index.html">Projects</a><a href="../contact/index.html">Contact</a><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a></div>
+        <div class="nav" id="topnav"><a class="active" href="../index.html">Evan Finnigan</a><a href="../contact/index.html">Contact</a></div>
       </nav>
     </header>
     <main class="content">
-      <h1>Evan Finnigan</h1>
       <div class="resume card">
+        <h1>Evan Finnigan</h1>
         <h2>Education</h2>
         <hr>
         <h3>The University of Western Ontario</h3>
         <h4 class="education">Bachelor of Science, 4 Year Program</h4>
-        <ul class="no-bullet">
+        <ul>
           <li><a href="http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg657.html">Specialization in Computer Science</a></li>
           <li><a href="http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg663.html">Minor in Game Development</a></li>
         </ul>
         <h4 class="education">Honors and Awards</h4>
-        <ul class="no-bullet">
+        <ul>
           <li>The Western Scholarship of Excellence <span class="date-right">2013</span></li>
           <li>Dean's Honor List <span class="date-right">2015/2016</span></li>
           <li>Dean's Honor List <span class="date-right">2017/2018</span></li>
@@ -69,7 +66,7 @@
         <hr>
         <h3>Certifications</h3>
         <div style="overflow-x:auto;">
-          <table>
+          <table class="ml" style="width: 700px; max-width: 100%;">
             <tbody>
               <tr>
                 <td>Nonviolent Crisis Intervention</td>
@@ -99,32 +96,35 @@
         <h2>Work Experience</h2>
         <hr>
         <div>
-          <h3>Website Design &amp; Development - <a href="http://www.sosgreatlakes.org/">SOS Great Lakes (Contract, November 2019 - May 2020)</a></h3>
-          <p>Website design &amp; functionality updates for <a href="sosgreatlakes.org">sosgreatlakes.org</a></p>
+          <h3>Instructor - Algorithmics Waterloo (January 2021 - Present)</h3>
+          <p>I currently teach Game Design &amp; Python online for <a href="https://waterloo.alg.academy/">Algorithmics Waterloo </a> on Wednesdays &amp; Sundays</p>
+        </div>
+        <hr>
+        <div>
+          <h3>Freelance Web &amp; Software Development (November 2019 - Present)</h3>
+          <p>I have worked on a variety of projects. Some are listed below.</p>
+          <ul>
+            <li>Website design &amp; functionality updates for <a href="sosgreatlakes.org">sosgreatlakes.org</a></li>
+            <li>Volunteer website updates for <a href="https://canterburyhillscamp.ca">canterburyhillscamp.ca</a></li>
+            <li>Backend development for <a href="https://www.time-pirate.com">time-pirate.com</a></li>
+          </ul>
         </div>
         <hr>
         <div>
           <h3>Resource Team - Canterbury Hills Camp (Summer 2019)</h3>
           <p>As a member of the Resource Team, my job was to be an all-encompassing resource for all staff and campers. As this was both an overnight camp and a day camp, this role was very involved, as I worked and lived at the camp for the entirety of each week.</p>
-          <ul>
-            <li>Interviewed candidates and participated in staff hiring decisions</li>
-            <li>Designed and lead training for all staff, as well as additional training throughout the summer for LITs</li>
-            <li>Oversaw the day-to-day operations of the camp</li>
-            <li>Gave first aid treatment to staff and campers in the wellness centre</li>
-            <li>Completed necessary documentation such as staff performance evaluations and medical distribution records</li>
-            <li>Fulfilled roles as a certified Assistant Ropes Course Instructor (ACCT Level 1) including setting up &amp; taking down belay systems and general ropes course supervision</li>
-          </ul>
         </div>
         <hr>
         <div>
           <h3 id="rp4k">Instructor - <a href="https://realprogramming.com/">Real Programming 4 Kids</a> (2018 / 2019)</h3>
-          <p>At RP4k I taught math &amp; programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. </p>
-          <p>At RP4K, I taught the following courses:</p>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - teaching the fundamentals of programming while making a game with Visual Basic</li>
-            <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - teaching Java &amp; Object-Oriented Programming while recreating <em><a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>Asteroids</a></em></li>
-            <li><a href="https://www.youtube.com/watch?v=G_E4z0kGrsE">Sharp Shooter</a> - teaching Vectors and C# while making a top-down shooter</li>
-          </ul>
+          <p>At RP4K I taught math &amp; programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. </p>
+          <p>I taught the following courses:
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=nlzYhy-0au4">Pizza Bandit</a> - teaching the fundamentals of programming while making a game with Visual Basic</li>
+              <li><a href="https://www.youtube.com/watch?v=Ch3l33Wk3kA">Asteroids</a> - teaching Java &amp; Object-Oriented Programming while recreating <em><a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>Asteroids</a></em></li>
+              <li><a href="https://www.youtube.com/watch?v=G_E4z0kGrsE">Sharp Shooter</a> - teaching Vectors and C# while making a top-down shooter</li>
+            </ul>
+          </p>
         </div>
         <hr>
         <div>
@@ -154,22 +154,22 @@
           <li>Unique alliance mechanics</li>
           <li>Different abilities: melee combat and two types of projectile combat</li>
         </ul>
-        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #fffdd0;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
         </div>
         <hr>
         <h3> <a href="../projects/vikings.html">Sjøkrigere </a> (CS 4483: Game Design - UWO) </h3>
         <p><i>Sjøkrigere</i> is a retro-style game in which the player explores the seas in a viking ship, battles sea monsters, and pillages towns for supplies and crew.</p>
         <p>Check out the project on <a href="https://github.com/evanfinnigan/cs4483_project">Github</a></p>
-        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #fffdd0;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
         </div>
         <hr>
         <h3>Lil' Math Chef (CS 4474: Human Computer Interaction - UWO)</h3>
         <p>An educational math program for learning fractions. The focus of the project was on usability and following principles of design. The program has three main components: a practice mode and two mini-games.</p>
         <p>Check out the project on <a href="https://github.com/evanfinnigan/HCI_cs4474">Github</a></p>
-        <div class="tags"><span class="tag" style="color: #000000; background-color: #ffffff;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
+        <div class="tags"><span class="tag" style="color: #000000; background-color: #fffdd0;">Unity</span> <span class="tag" style="color: #ffffff; background-color: #813084;">C#</span> 
         </div>
         <hr>
-        <h3> <a href="../projects/graph-algorithms.html"> </a> Graph Algorithms (CS 3346: Artificial Intelligence I - UWO)</h3>
+        <h3> <a href="../projects/graph-algorithms.html">Graph Algorithms </a> (CS 3346: Artificial Intelligence I - UWO)</h3>
         <p>Implemented the following algorithms:</p>
         <ul>
           <li>Depth First Search</li>
@@ -187,13 +187,7 @@
         <ul>
           <li>Ray intersection of 3D Geomerty: spheres, cubes, cylinders, and planes, as well as transformations of these shapes</li>
           <li>Implemented reflections and refractions for different types of material</li>
-          <li>Implemented Phong reflection model lighting techniques:
-            <ul>
-              <li>Ambient Shading</li>
-              <li>Diffuse Reflection</li>
-              <li>Specular Reflection</li>
-            </ul>
-          </li>
+          <li>Implemented Phong reflection model lighting techniques</li>
         </ul>
         <div class="tags"><span class="tag" style="color: #ffffff; background-color: #575757;">C</span> 
         </div>
@@ -202,7 +196,7 @@
         <p>This project was a simple desktop weather application.</p>
         <p>This group project was the first project (other than some small console programs) that we created without any starter code from instructors. It was my first time using an external API, dealing with JSON data, building a UI in Java, using a build system (maven), and my first group project making software.</p>
         <p>Check out the project on <a href="https://github.com/evanfinnigan/team7">Github</a></p>
-        <div class="tags"><span class="tag" style="color: #df2c27; background-color: #ffffff;">Java</span> 
+        <div class="tags"><span class="tag" style="color: #df2c27; background-color: #fffdd0;">Java</span> 
         </div>
       </div>
       <div class="resume card">
@@ -216,31 +210,23 @@
           <li>Bootstrap</li>
           <li>Pug view engine</li>
         </ul>
-        <div class="tags"><span class="tag" style="color: #46483d; background-color: #90c53f;">Node.js</span> <span class="tag">Express</span> <span class="tag" style="color: #464547; background-color: #ffffff;">mongoDB</span> <span class="tag" style="color: #ffffff; background-color: #a86454;">Pug</span> <span class="tag">Bootstrap</span> 
+        <div class="tags"><span class="tag" style="color: #46483d; background-color: #90c53f;">Node.js</span> <span class="tag">Express</span> <span class="tag" style="color: #464547; background-color: #fffdd0;">mongoDB</span> <span class="tag" style="color: #ffffff; background-color: #a86454;">Pug</span> <span class="tag">Bootstrap</span> 
         </div>
         <hr>
         <h3> <a href="https://evanfinnigan.github.io/monster_lazer/">Monster Lazer</a></h3>
         <p>An HTML5 canvas game I made at a hackathon to learn JavaScript.</p>
         <div class="tags"><span class="tag" style="color: #363536; background-color: #fbd601;">JavaScript</span> <span class="tag" style="color: #ffffff; background-color: #f16524;">HTML</span> 
-        </div>
-      </div><a href="../projects/index.html">All Projects</a><br><br>
-      <div class="clear"></div>
+        </div><br><br>
+      </div>
     </main>
     <footer>
-      <div>
-        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://github.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/github.png" alt="github icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
-              GitHub
-                    </span></a></div>
-        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://twitter.com/evanfinnigan"><span class="left"><img src="https://evanfinnigan.com/images/icons/twitter.png" alt="twitter icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
-              Twitter
-                    </span></a></div>
-        <div class="clear" style="margin-left: -60px;"><a class="nofocus" href="https://www.instagram.com/evanfinnigan/"><span class="left"><img src="https://evanfinnigan.com/images/icons/instagram.png" alt="instagram icon" height="32" width="32"></span><span class="left" style="padding-left: 1em;">
-              Instagram
-                    </span></a></div><br><br><br>
-        <div class="clear" style="margin-left: -85px;">
-          <address></address>Ⓒ <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2020</a><br><a href="/blog" style="font-size: 12px;">Website Updates</a>
-        </div>
-      </div>
+      <ul>
+        <li><a href="https://github.com/evanfinnigan"><img src="https://evanfinnigan.com/images/icons/github.png" alt="github icon" height="32" width="32"><span class="ml">GitHub    </span></a></li>
+        <li><a href="https://twitter.com/evanfinnigan"><img src="https://evanfinnigan.com/images/icons/twitter.png" alt="twitter icon" height="32" width="32"><span class="ml">Twitter</span></a></li>
+        <li><a href="https://www.instagram.com/evanfinnigan/"><img src="https://evanfinnigan.com/images/icons/instagram.png" alt="instagram icon" height="32" width="32"><span class="ml">Instagram</span></a><br>
+          <address></address>Ⓒ <a href="mailto:evanfinnigan@gmail.com">Evan Finnigan 2021</a>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>
