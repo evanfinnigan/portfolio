@@ -1,12 +1,10 @@
 # Portfolio
 
-## My Professional Portfolio [Website](https://www.evanfinnigan.com)
+## My Professional Portfolio
 
 A professional portfolio website.
 
-[evanfinnigan.com](https://www.evanfinnigan.com)
-
-Github Pages version - [evanfinnigan.github.io/portfolio](https://evanfinnigan.github.io/portfolio)
+[evanfinnigan.github.io/portfolio](https://evanfinnigan.github.io/portfolio)
 
 ## Master Branch
 
