@@ -1,15 +1,8 @@
 mixin nav(path)
-  //  Nav bar based on w3schools tutorials 
-  //  https://www.w3schools.com/howto/howto_js_navbar_sticky.asp 
-  //  https://www.w3schools.com/css/css_navbar.asp 
   nav
     .nav#topnav
       a.active(href=path + '/index.html') Evan Finnigan
-      a(href=path + '/projects/index.html') Projects
-      //- a(href=path + '/tutorials/index.html') Tutorials
-      //- a(href=path + '/blog/index.html') Blog
       a(href=path + '/contact/index.html') Contact
-      a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
 
 mixin meta(path)
   link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
@@ -24,7 +17,7 @@ mixin tag(t)
     when 'Pico-8'
       span.tag(style='color: #000000; background-color: #00e755;') #{t}
     when 'Unity'
-      span.tag(style='color: #000000; background-color: #ffffff;') #{t}
+      span.tag(style='color: #000000; background-color: #fffdd0;') #{t}
     when 'C#'
       span.tag(style='color: #ffffff; background-color: #813084;') #{t}
     when 'Pug'
@@ -38,9 +31,9 @@ mixin tag(t)
     when 'Node.js'
       span.tag(style='color: #46483d; background-color: #90c53f;') #{t}
     when 'Java'
-      span.tag(style='color: #df2c27; background-color: #ffffff;') #{t}
+      span.tag(style='color: #df2c27; background-color: #fffdd0;') #{t}
     when 'mongoDB'
-      span.tag(style='color: #464547; background-color: #ffffff;') #{t}
+      span.tag(style='color: #464547; background-color: #fffdd0;') #{t}
     when 'UWO'
       span.tag(style='color: #ffffff; background-color: #4f2683;') #{t}
     default

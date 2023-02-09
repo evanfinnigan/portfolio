@@ -11,19 +11,19 @@ html(lang='en')
       +nav('..')
 
     main.content
-      h1 Evan Finnigan
       .resume.card
+        h1 Evan Finnigan
         h2 Education
         hr
         h3 The University of Western Ontario
         h4.education Bachelor of Science, 4 Year Program
-        ul.no-bullet
+        ul
           li
             a(href='http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg657.html') Specialization in Computer Science
           li
             a(href='http://www.westerncalendar.uwo.ca/Archive/2013/2013/pg663.html') Minor in Game Development
         h4.education Honors and Awards
-        ul.no-bullet
+        ul
           li
             | The Western Scholarship of Excellence 
             span.date-right 2013
@@ -36,7 +36,7 @@ html(lang='en')
         hr
         h3 Certifications
         div(style='overflow-x:auto;')
-          table
+          table.ml(style='width: 700px; max-width: 100%;')
             tbody
               tr
                 td Nonviolent Crisis Intervention
@@ -64,39 +64,50 @@ html(lang='en')
         h2 Work Experience
         hr
         div
-          h3 Website Design &amp; Development - 
-            a(href="http://www.sosgreatlakes.org/") SOS Great Lakes (Contract, November 2019 - May 2020)
-          p Website design &amp; functionality updates for 
-            a(href="sosgreatlakes.org") sosgreatlakes.org
+          h3 Instructor - Crania Schools (January 2021 - Present)
+          p I currently teach Math, HTML, and JavaScript courses online for 
+            a(href="https://crania-schools.com/") Crania Schools
+            |  on Thursdays &amp; Saturdays
+        hr
+        div
+          h3 Instructor - Algorithmics Waterloo (January 2021 - Present)
+          p I currently teach Game Design &amp; Python online for 
+            a(href="https://waterloo.alg.academy/") Algorithmics Waterloo 
+            |  on Wednesdays &amp; Sundays
+        hr
+        div
+          h3 Freelance Website Design &amp; Software Development (November 2019 - Present)
+          p I am currently working on a variety of projects. Some that I currently or have previously worked on are listed below.
+          ul
+            li Website design &amp; functionality updates for 
+              a(href="sosgreatlakes.org") sosgreatlakes.org
+            li Volunteer website updates for 
+              a(href="https://canterburyhillscamp.ca") canterburyhillscamp.ca
+            li Backend development for 
+              a(href="https://www.time-pirate.com") time-pirate.com
+            li Various Other Projects
         hr
         div
           h3 Resource Team - Canterbury Hills Camp (Summer 2019)
           p As a member of the Resource Team, my job was to be an all-encompassing resource for all staff and campers. As this was both an overnight camp and a day camp, this role was very involved, as I worked and lived at the camp for the entirety of each week.
-          ul
-            li Interviewed candidates and participated in staff hiring decisions
-            li Designed and lead training for all staff, as well as additional training throughout the summer for LITs
-            li Oversaw the day-to-day operations of the camp
-            li Gave first aid treatment to staff and campers in the wellness centre
-            li Completed necessary documentation such as staff performance evaluations and medical distribution records
-            li Fulfilled roles as a certified Assistant Ropes Course Instructor (ACCT Level 1) including setting up &amp; taking down belay systems and general ropes course supervision
         hr
         div
           h3#rp4k
             | Instructor - 
             a(href='https://realprogramming.com/') Real Programming 4 Kids
             |  (2018 / 2019)
-          p At RP4k I taught math &amp; programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. 
-          p At RP4K, I taught the following courses:
-          ul
-            li
-              a(href='https://www.youtube.com/watch?v=nlzYhy-0au4') Pizza Bandit
-              |  - teaching the fundamentals of programming while making a game with Visual Basic
-            li
-              a(href='https://www.youtube.com/watch?v=Ch3l33Wk3kA') Asteroids
-              |  - teaching Java &amp; Object-Oriented Programming while recreating <em><a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>Asteroids</a></em>
-            li
-              a(href='https://www.youtube.com/watch?v=G_E4z0kGrsE') Sharp Shooter
-              |  - teaching Vectors and C# while making a top-down shooter
+          p At RP4K I taught math &amp; programming to students between grade 2 and grade 10. I was able to help students understand concepts from linear algebra and beyond, and we applied those concepts to the fun and creative task of making computer games. 
+          p I taught the following courses:
+            ul
+              li
+                a(href='https://www.youtube.com/watch?v=nlzYhy-0au4') Pizza Bandit
+                |  - teaching the fundamentals of programming while making a game with Visual Basic
+              li
+                a(href='https://www.youtube.com/watch?v=Ch3l33Wk3kA') Asteroids
+                |  - teaching Java &amp; Object-Oriented Programming while recreating <em><a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>Asteroids</a></em>
+              li
+                a(href='https://www.youtube.com/watch?v=G_E4z0kGrsE') Sharp Shooter
+                |  - teaching Vectors and C# while making a top-down shooter
         hr
         div
           h3#big-blue-bubble
@@ -113,13 +124,10 @@ html(lang='en')
             ul
               li
                 a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters/') My Singing Monsters
-
               li
                 a(href='https://www.bigbluebubble.com/home/games/my-singing-monsters-series/my-singing-monsters-official-guide/') My Singing Monsters: Official Guide
-
               li
                 a(href='https://www.bigbluebubble.com/home/games/home-arcade/') Home Arcade
-
               li
                 a(href='https://www.bigbluebubble.com/home/games/concert-kings/') Concert Kings
         
@@ -159,8 +167,8 @@ html(lang='en')
         +tags('Unity', 'C#')
         hr
         h3 
-          a(href='../projects/graph-algorithms.html') 
-          |  Graph Algorithms (CS 3346: Artificial Intelligence I - UWO)
+          a(href='../projects/graph-algorithms.html') Graph Algorithms 
+          |  (CS 3346: Artificial Intelligence I - UWO)
         p Implemented the following algorithms:
         ul
           li Depth First Search
@@ -181,12 +189,7 @@ html(lang='en')
         ul
           li Ray intersection of 3D Geomerty: spheres, cubes, cylinders, and planes, as well as transformations of these shapes
           li Implemented reflections and refractions for different types of material
-          li
-            | Implemented Phong reflection model lighting techniques:
-            ul
-              li Ambient Shading
-              li Diffuse Reflection
-              li Specular Reflection
+          li Implemented Phong reflection model lighting techniques
         +tags('C')
         hr
         h3 
@@ -214,13 +217,8 @@ html(lang='en')
           a(href='https://evanfinnigan.github.io/monster_lazer/') Monster Lazer
         p An HTML5 canvas game I made at a hackathon to learn JavaScript.
         +tags('JavaScript', 'HTML')
+        br
+        br
         
-      
-      
-      a(href='../projects/index.html') All Projects
-      br
-      br
-
-      .clear
 
     include ../common/footer.pug
